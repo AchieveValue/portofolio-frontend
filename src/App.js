@@ -13,7 +13,7 @@ function App() {
       </div>
 
       <div className="App d-none d-lg-block h-100">
-        <NavBar location="services"/>
+        <NavBar location="services" dark={true}/>
         <About/>
       </div>
     </>

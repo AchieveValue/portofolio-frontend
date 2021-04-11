@@ -1,13 +1,73 @@
-import { m } from 'framer-motion';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import LazyLoad from 'react-lazyload';
 
 const About = () => {
+    const ourTeamContent = [
+        {
+            animate: useAnimation(),
+            id: 0,
+            nume: 'Bunea Andrei',
+            pozitie: 'Founder',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+        {
+            animate: useAnimation(),
+            id: 1,
+            nume: 'Jomaa Abbas',
+            pozitie: 'Co-Founder',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+        {
+            animate: useAnimation(),
+            id: 2,
+            nume: 'Kevin lawlzer',
+            pozitie: 'Back-end Developer',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+        {
+            animate: useAnimation(),
+            id: 3,
+            nume: 'Iordy',
+            pozitie: 'Back-end Developer',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+        {
+            animate: useAnimation(),
+            id: 4,
+            nume: 'Prietenul lui Iordy',
+            pozitie: 'Front-end Developer',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+        {
+            animate: useAnimation(),
+            id: 4,
+            nume: 'Paola',
+            pozitie: 'Project Manager',
+            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+        },
+    ];
+    const [selectedTeamate, setSelectedTeamate] = useState(ourTeamContent[0]);
+
+    useEffect(() => {
+        ourTeamContent.map(el => {
+            if(el.id === selectedTeamate.id) {
+                el.animate.start({
+                    boxShadow: '0 0 0px 10px #E57016'
+                })
+            } else {
+                el.animate.start({
+                    boxShadow: '0 0 0px 0px #E57016'
+                })
+            }
+        })
+
+    }, [selectedTeamate])
 
     const parent = {
         hidden: {
-            opacity: 0,
+            opacity: 1,
         }, 
         show: {
             opacity: 1,
@@ -52,48 +112,66 @@ const About = () => {
 
     return (
         <motion.div variants={parent} initial="hidden" animate="show">
-            <motion.div className="container-fluid p-0 m-0 d-flex align-items-center d-flex flex-column-reverse justify-content-start" style={{ width: '99vw', height: '70vh', backgroundImage: `url('https://wallpaperbat.com/img/446956-developer-wallpaper-picture.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <motion.div className="container-fluid p-0 m-0 d-flex align-items-center d-flex flex-column-reverse justify-content-start" style={{ width: '100%', height: '70vh', backgroundImage: `url('https://wallpaperbat.com/img/446956-developer-wallpaper-picture.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container" style={{ marginBottom: '6%'}}>
                     <h1 style={{ color: '#E57016'}} className="poppins font-weight-bold">This is <span className="text-light">Achieve</span>Value</h1>
                     <h5 className="poppins text-light font-weight-light w-50">We are a startup company that aims to develop and deliver modern, rapid and engaging web-based applications.</h5>
                 </div>
             </motion.div>
 
-            <motion.div className="container" variants={children2} >
-                <div className="container d-flex align-items-center justify-content-between w-100" style={{ padding: '9%' }}>
-                    <div className="d-flex align-items-start justify-content-between">
-                        <div className="pr-5 mr-5">
-                            <h2 className="poppins font-weight-bold mb-1" style={{ color: '#222335' }}>How we are</h2>
-                            <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>different?</h2>
+            <LazyLoad height={200}>
+                <motion.div className="container" variants={children2} style={{ background: '#FFFFFF' }}>
+                    <div className="container d-flex align-items-center justify-content-between w-100" style={{ padding: '9%' }}>
+                        <div className="d-flex align-items-start justify-content-between">
+                            <div className="pr-5 mr-5">
+                                <h2 className="poppins font-weight-bold mb-1" style={{ color: '#222335' }}>How we are</h2>
+                                <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>different?</h2>
+                            </div>
+                            <h5 className="poppins text-dark font-weight-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
                         </div>
-                        <h5 className="poppins text-dark font-weight-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
                     </div>
-                </div>
-            </motion.div>
+                </motion.div>
+            </LazyLoad>
 
-            <motion.div className="container-fluid d-flex justify-content-center align-items-center" style={{ backgroundColor: '#222335', paddingTop: '8%', paddingBottom: '8%' }} variants={children}>
-                <div className="container w-100 row d-flex align-items-center justify-content-center align-items-center" style={{ height: '18vh' }}>
-                    <div className="col-12 mb-5 text-center">
-                        <h2 className="poppins font-weight-bold mb-1 text-light">Meet</h2>
-                        <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>Our team</h2>
-                    </div>
-                    <div className="col-2 w-100 h-100 mr-4">
-                        <motion.div className="rounded-circle" style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: '0 0 0px 0px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016' }}></motion.div>
-                    </div>
-                    <div className="col-2 w-100 h-100 mr-4">
-                        <div className="rounded-circle" style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                    </div>
-                    <div className="col-2 w-100 h-100 mr-4">
-                        <div className="rounded-circle" style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                    </div>
-                    <div className="col-2 w-100 h-100 mr-4">
-                        <div className="rounded-circle" style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                    </div>
-                    <div className="col-2 w-100 h-100">
-                        <div className="rounded-circle" style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                    </div>
+            <LazyLoad height={200}>
+                <div className="container-fluid py-2 pb-4" style={{ background: '#222335' }}>
+                    <motion.div className="container-fluid w-100 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#222335', paddingTop: '8%', paddingBottom: '8%' }} variants={children}>
+                        <div className="container w-100 row d-flex align-items-center justify-content-center align-items-center" style={{ height: '18vh' }}>
+                            <div className="col-12 mb-5 text-center">
+                                <h2 className="poppins font-weight-bold mb-1 text-light">Meet</h2>
+                                <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>Our team</h2>
+                            </div>
+                            <div className="col-2 w-100 h-100 mr-4" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            </div>
+                            <div className="col-2 w-100 h-100 mr-4" onClick={() => {setSelectedTeamate(ourTeamContent[1])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            </div>
+                            <div className="col-2 w-100 h-100 mr-4" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            </div>
+                            <div className="col-2 w-100 h-100 mr-4" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            </div>
+                            <div className="col-2 w-100 h-100 mr-4" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
-            </motion.div>
+            </LazyLoad>
+
+            <LazyLoad height={400}>
+                <div className="container-fluid py-2 d-flex justify-content-center" style={{ background: '#222335' }}>
+                    <motion.div className="container row d-flex justify-content-end px-5">
+                        <div className="col-9 bg-light pt-5 pb-4 bg-light mr-4" style={{ borderRadius: '30px', paddingLeft: '8%', paddingRight: '8%'}}>
+                            <h3 className="rightenous mb-1" style={{ color: '#E57016' }}>{selectedTeamate.nume}</h3>
+                            <h6 className="poppins font-weight-regular mb-4">{selectedTeamate.pozitie}</h6>
+                            <p>{selectedTeamate.descriere}</p>
+                        </div>
+                    </motion.div>
+                </div>
+            </LazyLoad>
         </motion.div>
     )
 }
