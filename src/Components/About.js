@@ -9,14 +9,14 @@ const About = () => {
             animate: useAnimation(),
             id: 0,
             nume: 'Bunea Andrei',
-            pozitie: 'Founder',
+            pozitie: 'Founder & Full Stack Developer',
             descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
         },
         {
             animate: useAnimation(),
             id: 1,
             nume: 'Jomaa Abbas',
-            pozitie: 'Co-Founder',
+            pozitie: 'Co-Founder & Full Stack Developer',
             descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
         },
         {
@@ -36,14 +36,7 @@ const About = () => {
         {
             animate: useAnimation(),
             id: 4,
-            nume: 'Prietenul lui Iordy',
-            pozitie: 'Front-end Developer',
-            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
-        },
-        {
-            animate: useAnimation(),
-            id: 4,
-            nume: 'Paola',
+            nume: 'Bîra Paola',
             pozitie: 'Project Manager',
             descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
         },
@@ -67,13 +60,14 @@ const About = () => {
 
     const parent = {
         hidden: {
-            opacity: 1,
+            opacity: 0,
         }, 
         show: {
             opacity: 1,
             transition: {
-                delay: 1,
+                delay: 0.5,
                 duration: 0.5,
+                ease: "easeOut",
                 staggerChildren: 2,
                 delayChildren: 2
             }
@@ -161,9 +155,9 @@ const About = () => {
                 </div>
             </LazyLoad>
 
-            <LazyLoad height={400}>
+            <LazyLoad height={200} >
                 <div className="container-fluid py-2 d-flex justify-content-center" style={{ background: '#222335' }}>
-                    <motion.div className="container row d-flex justify-content-end px-5">
+                    <motion.div className="container row d-flex justify-content-end px-5" variants={children2}>
                         <div className="col-9 bg-light pt-5 pb-4 bg-light mr-4" style={{ borderRadius: '30px', paddingLeft: '8%', paddingRight: '8%'}}>
                             <h3 className="rightenous mb-1" style={{ color: '#E57016' }}>{selectedTeamate.nume}</h3>
                             <h6 className="poppins font-weight-regular mb-4">{selectedTeamate.pozitie}</h6>
