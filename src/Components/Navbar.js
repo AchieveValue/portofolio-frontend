@@ -7,13 +7,13 @@ const NavBar = ({ location, dark }) => {
     const [hoveredLink, setHoveredLink] = useState(location);
 
     const linkStyle = {
-        cursor: 'pointer'
+        cursor: 'pointer',
     }
 
     if(dark) {
         return (
             <div className="navbar" style={{ background: '#222335'}}>
-                <div className="container-fluid py-2 d-flex align-items-center justify-content-betwen px-5">
+                <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
                     <a class="navbar-brand" href="#">
                         <div className="">
                             <h3 className="rightenous mb-1" style={{ color: '#FFFFFF'}}>AchieveValue</h3>
@@ -21,16 +21,12 @@ const NavBar = ({ location, dark }) => {
                         </div>
                     </a>
     
-                    <div className="w-50 d-flex justify-content-end align-items-center" onMouseLeave={() => { setHoveredLink(location) }}>
+                    <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex text-light rightenous justify-content-between">
                             <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 1 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5>
                             <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 2 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5>
-                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Our Projects</motion.h5>
+                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5>
                         </div>
-    
-                        <div className="">
-                            <button className="btn btn-outline-light px-4 poppins font-weight-bold py-1 ml-5" style={{ border: '2.5px solid white', borderRadius: '20px'}}>LET'S TALK</button>
-                        </div>  
                     </div>
                 </div>
             </div>
@@ -38,7 +34,7 @@ const NavBar = ({ location, dark }) => {
     } else {
         return (
             <div className="navbar" style={{ background: '#F2F3F8'}}>
-                <div className="container-fluid py-2 d-flex align-items-center justify-content-betwen px-5">
+                <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
                     <a class="navbar-brand" href="#">
                         <div className="">
                             <h3 className="rightenous mb-1" style={{ color: '#222335'}}>AchieveValue</h3>
@@ -46,16 +42,12 @@ const NavBar = ({ location, dark }) => {
                         </div>
                     </a>
     
-                    <div className="w-50 d-flex justify-content-end align-items-center" style={{ color: '#222335' }} onMouseLeave={() => { setHoveredLink(location) }}>
+                    <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" style={{ color: '#222335' }} onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex rightenous justify-content-between">
                         <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 1 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5>
                             <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 2 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }}>Services</motion.h5>
-                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Our Projects</motion.h5>
+                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5>
                         </div>
-    
-                        <div className="">
-                            <button className="btn btn-outline-light px-4 poppins font-weight-bold py-1 ml-5" style={{ border: '2.5px solid #222335', borderRadius: '20px', color: '#222335'}}>LET'S TALK</button>
-                        </div>  
                     </div>
                 </div>
             </div>

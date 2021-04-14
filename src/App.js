@@ -8,11 +8,11 @@ import About from './Components/About';
 function App() {
   return (
     <>
-      <div className="d-block d-lg-none">
-        This webiste is available on PC only for now!
-      </div>
+      {/* <div className="d-block d-md-none">
+        Get a bigger screen bro, you will develop eye issues.
+      </div> */}
 
-      <div className="App d-none d-lg-block h-100">
+      <div className="App h-100">
         <NavBar location="services" dark={true}/>
         <About/>
       </div>
