@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import { SmoothScroll, useWindowDimensions } from './Functions'
-
+import { SmoothScroll } from './Functions'
+import { Switch, Route, useLocation } from "react-router-dom";
 
 // Componenets
 import NavBar from './Components/Navbar';
@@ -9,20 +9,26 @@ import About from './Components/About';
 
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
     new SmoothScroll(document,100 ,25)
   }, [])
 
   return (
     <>
-      {/* <div className="d-block d-md-none">
-        Get a bigger screen bro, you will develop eye issues.
-      </div> */}
-
-      <div className="App h-100">
-        <NavBar location="services" dark={true}/>
-        <About/>
-      </div>
+      <NavBar  location={location.pathname.slice(1)} dark={true}/>
+      <Switch> 
+        <Route path='/about'>
+          <About/>
+        </Route> 
+        <Route path='/services'>
+          <About/>
+        </Route> 
+        <Route path='/projects'>
+          <About/>
+        </Route> 
+      </Switch>
     </>
   );
 }

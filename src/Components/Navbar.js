@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../App.css';
 import { motion } from 'framer-motion';
 
+
 const NavBar = ({ location, dark }) => {
-    location = ["about", "services", "projects"].indexOf(location);
+    location = ["about", "services", "projects"].indexOf(location) + 1;
+    
     const [hoveredLink, setHoveredLink] = useState(location);
 
     const linkStyle = {
@@ -23,9 +26,9 @@ const NavBar = ({ location, dark }) => {
     
                     <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex text-light rightenous justify-content-between">
-                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 1 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5>
-                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 2 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5>
-                            <motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5>
+                            <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 1 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5></Link>
+                            <Link to="/services" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 2 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5></Link>
+                            <Link to="/projects" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5></Link>
                         </div>
                     </div>
                 </div>
