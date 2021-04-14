@@ -1,4 +1,7 @@
 import './App.css';
+import React, { useEffect } from 'react';
+import { SmoothScroll, useWindowDimensions } from './Functions'
+
 
 // Componenets
 import NavBar from './Components/Navbar';
@@ -6,6 +9,10 @@ import About from './Components/About';
 
 
 function App() {
+  useEffect(() => {
+    new SmoothScroll(document,100 ,25)
+  }, [])
+
   return (
     <>
       {/* <div className="d-block d-md-none">

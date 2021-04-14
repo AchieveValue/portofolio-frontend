@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { motion, useAnimation } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
+import { useWindowDimensions } from '../Functions'
 
 const Footer = () => {
+    const { height, width } = useWindowDimensions();
+
     const children = {
         hidden: {
             opacity: 0, 
-            x: 600
+            x: (width < 900 ? 0 : -600) 
         },
         show: {
             x: 0, 
@@ -22,7 +25,7 @@ const Footer = () => {
     const children2 = {
         hidden: {
             opacity: 0, 
-            x: -600
+            x: (width < 900 ? 0 : 600) 
         },
         show: {
             x: 0, 

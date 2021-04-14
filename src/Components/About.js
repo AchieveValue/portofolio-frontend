@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { motion, useAnimation } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
+import { useWindowDimensions } from '../Functions'
 
 import Footer from './Footer'
 
 const About = () => {
+    const { height, width } = useWindowDimensions();
+
     const ourTeamContent = [
         {
             animate: useAnimation(),
@@ -77,7 +80,7 @@ const About = () => {
     const children = {
         hidden: {
             opacity: 0, 
-            x: 600
+            x: (width < 900 ? 0 : -600) 
         },
         show: {
             x: 0, 
@@ -92,7 +95,7 @@ const About = () => {
     const children2 = {
         hidden: {
             opacity: 0, 
-            x: -600
+            x: (width < 900 ? 0 : 600) 
         },
         show: {
             x: 0, 

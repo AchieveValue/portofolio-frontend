@@ -14,7 +14,7 @@ const NavBar = ({ location, dark }) => {
         return (
             <div className="navbar" style={{ background: '#222335'}}>
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
-                    <a class="navbar-brand" href="#">
+                    <a className="navbar-brand" href="#">
                         <div className="">
                             <h3 className="rightenous mb-1" style={{ color: '#FFFFFF'}}>AchieveValue</h3>
                             <h6 className="text-light poppins font-weight-light text-center"><small>Web For Artisans</small></h6>
@@ -35,7 +35,7 @@ const NavBar = ({ location, dark }) => {
         return (
             <div className="navbar" style={{ background: '#F2F3F8'}}>
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
-                    <a class="navbar-brand" href="#">
+                    <a clasName="navbar-brand" href="#">
                         <div className="">
                             <h3 className="rightenous mb-1" style={{ color: '#222335'}}>AchieveValue</h3>
                             <h6 className="poppins font-weight-light text-center" style={{ color: '#222335' }}><small>Web For Artisans</small></h6>
