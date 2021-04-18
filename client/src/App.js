@@ -6,13 +6,15 @@ import { Switch, Route, useLocation } from "react-router-dom";
 // Componenets
 import NavBar from './Components/Navbar';
 import About from './Components/About';
+import Footer from './Components/Footer'
+import ComingSoon from './Components/ComingSoon'
 
 
 function App() {
   const location = useLocation();
 
   useEffect(() => {
-    new SmoothScroll(document,100 ,25)
+    new SmoothScroll(document, 100, 20)
   }, [])
 
   return (
@@ -23,12 +25,13 @@ function App() {
           <About/>
         </Route> 
         <Route path='/services'>
-          <About/>
+          <ComingSoon />
         </Route> 
         <Route path='/projects'>
-          <About/>
+          <ComingSoon />
         </Route> 
       </Switch>
+      <Footer />
     </>
   );
 }

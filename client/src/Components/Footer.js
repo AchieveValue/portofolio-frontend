@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../App.css';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
 import { useWindowDimensions } from '../Functions'
 
 const Footer = () => {
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     const children = {
         hidden: {
@@ -21,22 +21,6 @@ const Footer = () => {
             }
         }
     }
-
-    const children2 = {
-        hidden: {
-            opacity: 0, 
-            x: (width < 900 ? 0 : 600) 
-        },
-        show: {
-            x: 0, 
-            opacity: 1,
-            transition: {
-                duration: 0.8, 
-                ease: "easeOut"  
-            }
-        }
-    }
-
 
     return (
         <>
@@ -70,9 +54,9 @@ const Footer = () => {
                         <h6 className="mb-0 poppings font-weight-light">stay informed</h6>
                         <h4 className="rightenous">Follow us here</h4>
                         <div className="d-flex align-items-center justify-content-around w-100" style={{ fontSize: '3em'}}>
-                            <a href="" style={{ color: 'white' }}><i className="fab fa-twitter"></i></a>
-                            <a href="" style={{ color: 'white' }}><i className="fab fa-facebook"></i></a>
-                            <a href="" style={{ color: 'white' }}><i className="fab fa-discord"></i></a>
+                            <a href="https://twitter.com/AchieveValue" style={{ color: 'white' }}><i className="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" style={{ color: 'white' }}><i className="fab fa-facebook"></i></a>
+                            <a href="https://discord.gg/4G9Tj7Ym" style={{ color: 'white' }}><i className="fab fa-discord"></i></a>
                         </div>
                     </div>
                 </div>
