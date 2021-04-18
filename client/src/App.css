@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.rightenous {
+    font-family: 'Righteous', cursive;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navLinkLocation {
+    border-bottom: '2px solid white';
+}
+
+.teamPicture:hover {
+    box-shadow: 0 0 0px 10px #E57016;
+}
+
+.newsletterInput {
+    border-bottom: 3px solid #54545A;
+    color: #54545A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.newsletterInput:focus {
+    color: #E57016;
+    border-bottom: 3px solid #E57016;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.newsletterInput:focus::placeholder {
+    color: #E57016;
+}
+
+.newsletterInput::placeholder {
+    transition: 0.3s;
+    color: #54545A;
+    font-weight: 400;
+}
+
+
+.newsletterButton {
+    border: 3px solid #E57016;
+    border-radius: 30px;
+    color: #E57016;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+.newsletterButton:hover {
+    background-color: #E57016;
+    border-radius: 15px;
+    color: white;
+}
+
+
+/* font-family: 'Righteous', cursive; */
+/* font-family: 'Poppins', sans-serif; */
