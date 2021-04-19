@@ -182,11 +182,11 @@ const About = () => {
             <LazyLoad height={200}>
                 <div className="container-fluid py-2 d-flex justify-content-center pb-lg-5" style={{ background: '#222335'}}>
                     <motion.div className="container row d-flex justify-content-center justify-content-lg-end px-5 pb-5 pb-lg-0" variants={children2}>
-                        <div className="col-12 col-lg-9 bg-light pt-5 pb-4 bg-light mr-0 mr-lg-4" style={{ borderRadius: '30px', paddingLeft: '8%', paddingRight: '8%'}}>
+                        <motion.div transition={{ duration: 0.4 }} className="col-12 col-lg-9 bg-light pt-5 pb-4 bg-light mr-0 mr-lg-4" style={{ borderRadius: '30px', paddingLeft: '8%', paddingRight: '8%'}}>
                             <h3 className="rightenous mb-1" style={{ color: '#E57016' }}>{selectedTeamate.nume}</h3>
                             <h6 className="poppins font-weight-regular mb-4">{selectedTeamate.pozitie}</h6>
                             <p>{selectedTeamate.descriere}</p>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </LazyLoad>

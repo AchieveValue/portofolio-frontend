@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 import About from './Components/About';
 import Footer from './Components/Footer'
 import ComingSoon from './Components/ComingSoon'
+import Error404 from './Components/Error404'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.key}>
+        <Switch location={location} key={location.key} >
           <Route path='/about'>
             <About/>
           </Route>
@@ -31,7 +32,7 @@ function App() {
             <ComingSoon />
           </Route>
           <Route>
-            <ComingSoon />
+            <Error404 />
           </Route>
         </Switch>
       </AnimatePresence>
