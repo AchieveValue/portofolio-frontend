@@ -51,7 +51,7 @@ const NavBar = ({ dark }) => {
             <motion.div className="navbar" style={{ background: '#222335'}} variants={parent} initial="hidden" animate="show" exit="hidden">
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
                     <Link className="navbar-brand" to="/" variants={children}>
-                        <div className="">
+                        <div className="d-flex align-items-center justify-content-center">
                             <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '40%' }}/>
                         </div>
                     </Link>

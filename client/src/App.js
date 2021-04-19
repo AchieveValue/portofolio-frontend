@@ -22,17 +22,17 @@ function App() {
     <>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route exact path='/'>
-            <ComingSoon/>
-          </Route>
-          <Route exact path='/about'>
+          <Route path='/about'>
             <About/>
           </Route>
-          <Route exact path='/services'>
+          <Route path='/services'>
             <ComingSoon />
           </Route>
-          <Route exact path='/projects'>
+          <Route path='/projects'>
             <ComingSoon />
+          </Route>
+          <Route path='/'>
+            <ComingSoon/>
           </Route>
           <Route>
             <Error404 />

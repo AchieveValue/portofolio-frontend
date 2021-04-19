@@ -13,7 +13,7 @@ const Error404 = () => {
             <NavBar dark={true}/>
             <motion.div variants={parent} initial="hidden" animate="show" exit="exit">
                 <div className="container-fluid" style={{ background: '#222335', paddingTop: '15vh', paddingBottom: '15vh' }}>
-                    <div className="container d-flex align-items-center justify-content-center text-light">
+                    <div className="container d-flex align-items-center justify-content-center text-light flex-column flex-lg-row text-center">
                         <motion.h1 className="mr-5 display-4" initial={{ rotateY: 0 }} animate={{ rotateY: [360, 0] }}><i className="fas fa-exclamation-circle"></i></motion.h1>
                         <div className="">
                             <h2 className="rightenous">Opps, this page was not found!</h2>
