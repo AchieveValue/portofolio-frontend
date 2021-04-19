@@ -20,26 +20,28 @@ function App() {
 
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.key}>
-          <Route path='/about'>
-            <About/>
-          </Route>
-          <Route path='/services'>
-            <ComingSoon />
-          </Route>
-          <Route path='/projects'>
-            <ComingSoon />
-          </Route>
-          <Route path='/'>
-            <ComingSoon/>
-          </Route>
-          <Route>
-            <Error404 />
-          </Route>
-        </Switch>
-        <Footer />
-      </AnimatePresence>
+      <Switch location={location} key={location.key}>
+        <Route path='/about'>
+          <About/>
+          <Footer />
+        </Route>
+        <Route path='/services'>
+          <ComingSoon />
+          <Footer />
+        </Route>
+        <Route path='/projects'>
+          <ComingSoon />
+          <Footer />
+        </Route>
+        <Route path='/'>
+          <ComingSoon/>
+          <Footer />
+        </Route>
+        <Route>
+          <Error404 />
+          <Footer />
+        </Route>
+      </Switch>
     </>
   );
 }
