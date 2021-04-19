@@ -6,6 +6,8 @@ import { useWindowDimensions } from '../Functions'
 
 import NavBar from './Navbar';
 
+import parent from './Animations';
+
 const About = () => {
     const { width } = useWindowDimensions();
     const [ourTeamContent] = useState([
@@ -14,7 +16,7 @@ const About = () => {
             id: 0,
             nume: 'Bunea Andrei',
             pozitie: 'Founder & Full Stack Developer',
-            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+            descriere: `Hi, my name is Andrei. I really like programming and entrepreneurship. I started AchieveValue because I believe in young peoples, I think we can deliver original applications, fast and modern. I always like to learn new things, but also help. At this moment, I am a Full Stack Web Developer but also the leader of the team.`
         },
         {
             animate: useAnimation(),
@@ -63,20 +65,6 @@ const About = () => {
         })
     }, [selectedTeamate, ourTeamContent])
 
-    const parent = {
-        hidden: {
-            opacity: 0,
-        }, 
-        show: {
-            opacity: 1,
-            transition: {
-                delay: 3,
-                duration: 0.5,
-                ease: "easeOut",
-            }
-        }
-    }
-
     const children = {
         hidden: {
             opacity: 0, 
@@ -110,7 +98,7 @@ const About = () => {
     return (
         <>
         <NavBar dark={true}/>
-        <motion.div variants={parent} initial="hidden" animate="show" exit={{ opacity: 0 }}>
+        <motion.div variants={parent} initial="hidden" animate="show" exit="exit">
 
             <motion.div className="container-fluid p-0 m-0 d-flex align-items-center d-flex flex-column-reverse justify-content-start px-5 px-lg-0" style={{ width: '100%', height: '70vh', backgroundImage: `url('https://wallpaperbat.com/img/446956-developer-wallpaper-picture.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container" style={{ marginBottom: '6%'}}>
@@ -127,7 +115,7 @@ const About = () => {
                                 <h2 className="poppins font-weight-bold mb-1" style={{ color: '#222335' }}>How we are</h2>
                                 <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>different?</h2>
                             </div>
-                            <h5 className="poppins text-dark font-weight-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
+                            <h5 className="poppins text-dark font-weight-light">Our goal is to learn and apply innovative designs and techniques to create enterprise-quality websites. We achieve to model beautiful websites, fully customized for your needs. Our values are to work proficiently and swiftly to get the most out of your value.</h5>
                         </div>
                     </div>
                 </motion.div>

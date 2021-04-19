@@ -50,13 +50,12 @@ const NavBar = ({ dark }) => {
         return (
             <motion.div className="navbar" style={{ background: '#222335'}} variants={parent} initial="hidden" animate="show" exit="hidden">
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
-                    <motion.a className="navbar-brand" href="/" variants={children}>
+                    <Link className="navbar-brand" to="/" variants={children}>
                         <div className="">
-                            <h3 className="rightenous mb-1" style={{ color: '#FFFFFF'}}>AchieveValue</h3>
-                            <h6 className="text-light poppins font-weight-light text-center"><small>Web For Artisans</small></h6>
+                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '40%' }}/>
                         </div>
-                    </motion.a>
-                    <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
+                    </Link>
+                    <div className="w-50 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex text-light rightenous justify-content-between">
                             <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 1 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5></Link>
                             <Link to="/services" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 2 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5></Link>

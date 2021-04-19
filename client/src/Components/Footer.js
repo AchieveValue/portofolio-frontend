@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
 import { useWindowDimensions } from '../Functions'
 
+import parent from './Animations';
+
 const Footer = () => {
     const { width } = useWindowDimensions();
 
@@ -23,7 +25,7 @@ const Footer = () => {
     }
 
     return (
-        <>
+        <motion.div variants={parent} initial="hidden" animate="show" exit={{ opacity: 0 }}>
             <LazyLoad height={300}>
                 <motion.div className="container" variants={children} initial="hidden" animate="show" style={{ background: '#FFFFFF' }}>
                     <div className="container row d-flex align-items-center justify-content-center justify-content-lg-between w-100 py-5 px-0 m-0" style={{ padding: '9%' }}>
@@ -61,7 +63,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 

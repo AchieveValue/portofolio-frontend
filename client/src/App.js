@@ -21,22 +21,25 @@ function App() {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.key} >
-          <Route path='/about'>
+        <Switch location={location} key={location.key}>
+          <Route exact path='/'>
+            <ComingSoon/>
+          </Route>
+          <Route exact path='/about'>
             <About/>
           </Route>
-          <Route path='/services'>
+          <Route exact path='/services'>
             <ComingSoon />
           </Route>
-          <Route path='/projects'>
+          <Route exact path='/projects'>
             <ComingSoon />
           </Route>
           <Route>
             <Error404 />
           </Route>
         </Switch>
+        <Footer />
       </AnimatePresence>
-      <Footer />
     </>
   );
 }
