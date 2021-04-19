@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 import NavBar from './Navbar';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
 import parent from './Animations';
