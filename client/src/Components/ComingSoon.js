@@ -1,10 +1,15 @@
 import React from 'react';
 
+import NavBar from './Navbar';
+
 const ComingSoon = () => {
     return (
-        <div className="">
-            Soon bitch!
-        </div>
+        <>
+            <NavBar dark={false}/>
+            <div className="">
+                Soon!
+            </div>
+        </>
     )
 }
 

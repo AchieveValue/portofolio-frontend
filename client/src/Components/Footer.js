@@ -29,12 +29,12 @@ const Footer = () => {
                     <div className="container row d-flex align-items-center justify-content-center justify-content-lg-between w-100 py-5 px-0 m-0" style={{ padding: '9%' }}>
                         <div className="col-12 text-center text-lg-left col-lg-5 mb-3 mb-lg-0 d-flex align-items-center align-items-lg-start flex-column px-0">
                             <h1 className="poppins mb-1" style={{ color: '#222335', fontWeight: 600 }}>Newsletter</h1>
-                            <h6 className="poppins w-75" style={{ color: '#12121A', fontWeight: 400 }}>Get our latest insights on how to make your supply chain your competitive advantage.</h6>
+                            <h6 className="poppins w-75" style={{ color: '#12121A', fontWeight: 400 }}>Get our latest insights on how to get the most out of your webiste (est. 5 emails/month).</h6>
                         </div>
                         <div className="col-8 col-lg d-flex align-items-center flex-column">
                             <input type="email" className="w-100 newsletterInput pb-2 text-center text-lg-left" placeholder="Your Email Address"/>
                         </div>
-                        <div className="col-12 col-lg-2 d-flex align-items-center flex-column mt-4 mt-lg-0"><button className="btn newsletterButton ml-lg-5 px-4">Subscribe</button></div>
+                        <div className="col-12 col-lg-2 d-flex align-items-center flex-column mt-4 mt-lg-0"><button className="btn newsletterButton ml-lg-5 px-4" style={{ cursor: "not-allowed" }} disabled>Soon!</button></div>
                     </div>
                 </motion.div>
             </LazyLoad>

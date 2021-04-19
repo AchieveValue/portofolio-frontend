@@ -4,6 +4,8 @@ import { motion, useAnimation } from 'framer-motion';
 import LazyLoad from 'react-lazyload';
 import { useWindowDimensions } from '../Functions'
 
+import NavBar from './Navbar';
+
 const About = () => {
     const { width } = useWindowDimensions();
     const [ourTeamContent] = useState([
@@ -68,7 +70,7 @@ const About = () => {
         show: {
             opacity: 1,
             transition: {
-                delay: 3.4,
+                delay: 3,
                 duration: 0.5,
                 ease: "easeOut",
             }
@@ -107,7 +109,8 @@ const About = () => {
 
     return (
         <>
-        <motion.div variants={parent} initial="hidden" animate="show">
+        <NavBar dark={true}/>
+        <motion.div variants={parent} initial="hidden" animate="show" exit={{ opacity: 0 }}>
 
             <motion.div className="container-fluid p-0 m-0 d-flex align-items-center d-flex flex-column-reverse justify-content-start px-5 px-lg-0" style={{ width: '100%', height: '70vh', backgroundImage: `url('https://wallpaperbat.com/img/446956-developer-wallpaper-picture.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container" style={{ marginBottom: '6%'}}>

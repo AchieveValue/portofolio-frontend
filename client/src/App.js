@@ -1,10 +1,10 @@
 import './App.css';
 import React, { useEffect } from 'react';
 import { SmoothScroll } from './Functions'
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation} from "react-router-dom";
+import { AnimatePresence } from 'framer-motion'
 
 // Componenets
-import NavBar from './Components/Navbar';
 import About from './Components/About';
 import Footer from './Components/Footer'
 import ComingSoon from './Components/ComingSoon'
@@ -19,18 +19,22 @@ function App() {
 
   return (
     <>
-      <NavBar  location={location.pathname.slice(1)} dark={true}/>
-      <Switch> 
-        <Route path='/about'>
-          <About/>
-        </Route> 
-        <Route path='/services'>
-          <ComingSoon />
-        </Route> 
-        <Route path='/projects'>
-          <ComingSoon />
-        </Route> 
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route path='/about'>
+            <About/>
+          </Route>
+          <Route path='/services'>
+            <ComingSoon />
+          </Route>
+          <Route path='/projects'>
+            <ComingSoon />
+          </Route>
+          <Route>
+            <ComingSoon />
+          </Route>
+        </Switch>
+      </AnimatePresence>
       <Footer />
     </>
   );
