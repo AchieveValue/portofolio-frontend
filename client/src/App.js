@@ -2,7 +2,6 @@ import './App.css';
 import React, { useEffect } from 'react';
 import { SmoothScroll } from './Functions'
 import { Switch, Route, useLocation} from "react-router-dom";
-import { AnimatePresence } from 'framer-motion'
 
 // Componenets
 import About from './Components/About';
