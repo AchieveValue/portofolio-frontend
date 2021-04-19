@@ -16,7 +16,7 @@ const About = () => {
             id: 0,
             nume: 'Bunea Andrei',
             pozitie: 'Founder & Full Stack Developer',
-            descriere: `Hi, my name is Andrei. I really like programming and entrepreneurship. I started AchieveValue because I believe in young peoples, I think we can deliver original applications, fast and modern. I always like to learn new things, but also help. At this moment, I am a Full Stack Web Developer but also the leader of the team.`
+            descriere: `Hi, my name is Andrei. I enjoy doing programming and entrepreneurship, and at the moment I am a Full Stack Web Developer and the leader of the team. I started AchieveValue because I believe in young peoples, like us. I think we can deliver original, fast and modern web based applications. I always like to learn and improve myself, but also I like to help others.`
         },
         {
             animate: useAnimation(),
