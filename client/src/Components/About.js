@@ -28,7 +28,7 @@ const About = () => {
             id: 2,
             nume: 'Kevin Porter',
             pozitie: 'Back-end Developer',
-            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+            descriere: `Hello! I’m Kevin. I’m currently 18 years old, and I primarily write code for AV (AchieveValue’s) back-end. I joined the team so I could gain experience in a variety of fields, such as the back-end, front-end, UI design, and gain proficiency in working with other like-minded people. I’m never afraid to start a new project, or to learn a new skill, and I’ll always put my best foot forward so I can be the best at any task I do.`
         },
         {
             animate: useAnimation(),
