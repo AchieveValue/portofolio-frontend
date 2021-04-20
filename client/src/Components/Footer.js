@@ -57,7 +57,8 @@ const Footer = () => {
                         <h4 className="rightenous">Follow us here</h4>
                         <div className="d-flex align-items-center justify-content-around w-100" style={{ fontSize: '3em'}}>
                             <a href="https://twitter.com/AchieveValue" style={{ color: 'white' }}><i className="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/" style={{ color: 'white' }}><i className="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/Achieve-Value-102954528590025" style={{ color: 'white' }}><i className="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/achieve_value/" style={{ color: 'white' }}><i className="fab fa-instagram-square"></i></a>
                             <a href="https://discord.gg/4G9Tj7Ym" style={{ color: 'white' }}><i className="fab fa-discord"></i></a>
                         </div>
                     </div>

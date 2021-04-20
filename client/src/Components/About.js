@@ -23,7 +23,7 @@ const About = () => {
             id: 1,
             nume: 'Jomaa Abbas',
             pozitie: 'Co-Founder & Full Stack Developer',
-            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+            descriere: `Description coming soon!`
         },
         {
             animate: useAnimation(),
@@ -42,9 +42,9 @@ const About = () => {
         {
             animate: useAnimation(),
             id: 4,
-            nume: 'Denisa',
+            nume: 'Denisa Bodea',
             pozitie: 'Graphic & UI Designer',
-            descriere: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of.`
+            descriere: `Description coming soon!`
         },
     ]);
     const [selectedTeamate, setSelectedTeamate] = useState(ourTeamContent[0]);
@@ -142,7 +142,7 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://lh3.googleusercontent.com/proxy/n0cRJA1do5ETnfF9H-4LcqHu3pNw6ibB2LlnM5ttFSNEe4LIhF5eh7n2H2UK1F40GznraDYYLCt9kb51Oqc0GuX3npvYxega0RdU_9v9ltA1Pr4bu3A6GFpVlod6')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
 
@@ -160,7 +160,7 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[4].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://lh3.googleusercontent.com/proxy/n0cRJA1do5ETnfF9H-4LcqHu3pNw6ibB2LlnM5ttFSNEe4LIhF5eh7n2H2UK1F40GznraDYYLCt9kb51Oqc0GuX3npvYxega0RdU_9v9ltA1Pr4bu3A6GFpVlod6')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
                     </motion.div>
