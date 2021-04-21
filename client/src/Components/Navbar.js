@@ -52,7 +52,7 @@ const NavBar = ({ dark }) => {
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
                     <Link className="navbar-brand" to="/" variants={children}>
                         <div className="d-flex align-items-center justify-content-center">
-                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '40%' }}/>
+                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '35%' }}/>
                         </div>
                     </Link>
                     <div className="w-50 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
@@ -69,12 +69,11 @@ const NavBar = ({ dark }) => {
         return (
             <motion.div className="navbar" style={{ background: '#F2F3F8'}} variants={parent} initial="hidden" animate="show" exit="hidden">
                 <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
-                    <motion.a clasName="navbar-brand" href="/" variants={children}>
-                        <div className="">
-                            <h3 className="rightenous mb-1" style={{ color: '#222335'}}>AchieveValue</h3>
-                            <h6 className="poppins font-weight-light text-center" style={{ color: '#222335' }}><small>Web For Artisans</small></h6>
+                    <Link className="navbar-brand" to="/" variants={children}>
+                        <div className="d-flex align-items-center justify-content-center">
+                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '35%' }}/>
                         </div>
-                    </motion.a>
+                    </Link>
     
                     <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" style={{ color: '#222335' }} onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex rightenous justify-content-between">

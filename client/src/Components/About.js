@@ -23,7 +23,7 @@ const About = () => {
             id: 1,
             nume: 'Jomaa Abbas',
             pozitie: 'Co-Founder & Full Stack Developer',
-            descriere: `Description coming soon!`
+            descriere: `Soon! `
         },
         {
             animate: useAnimation(),
@@ -44,7 +44,7 @@ const About = () => {
             id: 4,
             nume: 'Denisa Bodea',
             pozitie: 'Graphic & UI Designer',
-            descriere: `Description coming soon!`
+            descriere: `Hello! My name is Denisa, I’m 17 years old and I am the graphic designer of the team. I love to put my creativity into our projects, illustrate them and see the result of my work. I joined this team in order to develop skills in this field and evolve along with the team. I am ready to use my knowledge to create proper designs and learn new things to implement.`
         },
     ]);
     const [selectedTeamate, setSelectedTeamate] = useState(ourTeamContent[0]);
@@ -63,7 +63,7 @@ const About = () => {
 
             return true;
         })
-    }, [selectedTeamate, ourTeamContent])
+    }, [selectedTeamate, ourTeamContent]);
 
     const children = {
         hidden: {
@@ -98,7 +98,7 @@ const About = () => {
     return (
         <>
         <NavBar dark={true}/>
-        <motion.div variants={parent} initial="hidden" animate="show" exit="exit">
+        <motion.div variants={parent} initial="hidden" animate="show">
 
             <motion.div className="container-fluid p-0 m-0 d-flex align-items-center d-flex flex-column-reverse justify-content-start px-5 px-lg-0" style={{ width: '100%', height: '70vh', backgroundImage: `url('https://wallpaperbat.com/img/446956-developer-wallpaper-picture.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="container" style={{ marginBottom: '6%'}}>
@@ -136,13 +136,13 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4D03AQG1I3VEhuMmYg/profile-displayphoto-shrink_200_200/0/1618646160415?e=1624492800&v=beta&t=20c7sTMCOFuuu0kriem9d4L7KCaQJfZTUi80dPa9pFE')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://cdn.discordapp.com/attachments/462194883097001994/834362672085598238/Screenshot_17.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://lh3.googleusercontent.com/proxy/n0cRJA1do5ETnfF9H-4LcqHu3pNw6ibB2LlnM5ttFSNEe4LIhF5eh7n2H2UK1F40GznraDYYLCt9kb51Oqc0GuX3npvYxega0RdU_9v9ltA1Pr4bu3A6GFpVlod6')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
 
@@ -154,13 +154,13 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4D03AQG1I3VEhuMmYg/profile-displayphoto-shrink_200_200/0/1618646160415?e=1624492800&v=beta&t=20c7sTMCOFuuu0kriem9d4L7KCaQJfZTUi80dPa9pFE')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://cdn.discordapp.com/attachments/462194883097001994/834362672085598238/Screenshot_17.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://lh3.googleusercontent.com/proxy/n0cRJA1do5ETnfF9H-4LcqHu3pNw6ibB2LlnM5ttFSNEe4LIhF5eh7n2H2UK1F40GznraDYYLCt9kb51Oqc0GuX3npvYxega0RdU_9v9ltA1Pr4bu3A6GFpVlod6')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
                     </motion.div>
