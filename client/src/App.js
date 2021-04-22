@@ -6,8 +6,10 @@ import { Switch, Route, useLocation} from "react-router-dom";
 // Componenets
 import About from './Components/About';
 import Footer from './Components/Footer'
-import ComingSoon from './Components/ComingSoon'
-import Error404 from './Components/Error404'
+import ComingSoon from './Components/ComingSoon';
+import Error404 from './Components/Error404';
+import LandingPage from './Components/LandingPage';
+import Services from './Components/Services';
 
 
 function App() {
@@ -25,15 +27,14 @@ function App() {
           <Footer />
         </Route>
         <Route path='/services'>
-          <ComingSoon />
-          <Footer />
+          <Services />
         </Route>
         <Route path='/projects'>
           <ComingSoon />
           <Footer />
         </Route>
         <Route path='/'>
-          <ComingSoon/>
+          <LandingPage />
           <Footer />
         </Route>
         <Route>

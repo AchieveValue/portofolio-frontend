@@ -49,17 +49,15 @@ const NavBar = ({ dark }) => {
     if(dark) {
         return (
             <motion.div className="navbar" style={{ background: '#222335'}} variants={parent} initial="hidden" animate="show" exit="hidden">
-                <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
+                <div className="container py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
                     <Link className="navbar-brand" to="/" variants={children}>
-                        <div className="d-flex align-items-center justify-content-center">
-                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '35%' }}/>
-                        </div>
+                        <h3 className="rightenous text-light">Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
                     </Link>
                     <div className="w-50 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex text-light rightenous justify-content-between">
                             <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 1 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5></Link>
                             <Link to="/services" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 2 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5></Link>
-                            <Link to="/projects" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5></Link>
+                            <Link to="/projects" style={{ color: 'white', textDecoration: 'none' }}><motion.h5 className="mb-0 pb-1" variants={children} style={(hoveredLink === 3 ? { borderBottom: '2.5px solid white', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5></Link>
                         </div>
                     </div>
                 </div>
@@ -67,19 +65,16 @@ const NavBar = ({ dark }) => {
         )
     } else {
         return (
-            <motion.div className="navbar" style={{ background: '#F2F3F8'}} variants={parent} initial="hidden" animate="show" exit="hidden">
-                <div className="container-fluid py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 px-lg-5">
+            <motion.div className="navbar" style={{ background: 'white'}} variants={parent} initial="hidden" animate="show" exit="hidden">
+                <div className="container py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
                     <Link className="navbar-brand" to="/" variants={children}>
-                        <div className="d-flex align-items-center justify-content-center">
-                            <img src="https://i.ibb.co/Jsr94Hw/Frame-2alt-logo.png" alt="" style={{ maxWidth: '35%' }}/>
-                        </div>
+                        <h3 className="rightenous" style={{ color: '#222335' }}>Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
                     </Link>
-    
-                    <div className="w-75 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" style={{ color: '#222335' }} onMouseLeave={() => { setHoveredLink(location) }}>
-                        <div className="d-flex rightenous justify-content-between">
+                    <div className="w-50 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
+                        <div className="d-flex text-light rightenous justify-content-between">
                             <Link to="/about" style={{ color: '#222335', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 1 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(1) }}>About</motion.h5></Link>
                             <Link to="/services" style={{ color: '#222335', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 2 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(2) }} transition={{ duration: 2 }}>Services</motion.h5></Link>
-                            <Link to="/projects" style={{ color: '#222335', textDecoration: 'none' }}><motion.h5 className="mr-4 mb-0 pb-1" variants={children} style={(hoveredLink === 3 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5></Link>
+                            <Link to="/projects" style={{ color: '#222335', textDecoration: 'none' }}><motion.h5 className="mb-0 pb-1" variants={children} style={(hoveredLink === 3 ? { borderBottom: '2.5px solid #222335', ...linkStyle} : { borderBottom: 0, ...linkStyle })} onMouseEnter={() => { setHoveredLink(3) }}>Projects</motion.h5></Link>
                         </div>
                     </div>
                 </div>
