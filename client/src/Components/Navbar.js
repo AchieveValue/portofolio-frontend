@@ -49,7 +49,8 @@ const NavBar = ({ dark }) => {
     if(dark) {
         return (
             <motion.div className="navbar" style={{ background: '#222335'}} variants={parent} initial="hidden" animate="show" exit="hidden">
-                <div className="container py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
+                <img style={{ position: 'fixed', top: '3%', left: '10%', maxWidth: '8vh' }} className="mr-5" src="https://i.ibb.co/272NT0y/Logo-Small-Square-removebg-preview.png" alt="Logo-Small-Square-removebg-preview" border="0" />
+                <div className="container pt-5 pb-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
                     <Link className="navbar-brand" to="/" variants={children}>
                         <h3 className="rightenous text-light">Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
                     </Link>
@@ -66,7 +67,8 @@ const NavBar = ({ dark }) => {
     } else {
         return (
             <motion.div className="navbar" style={{ background: 'white'}} variants={parent} initial="hidden" animate="show" exit="hidden">
-                <div className="container py-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
+                <img style={{ position: 'fixed', top: '3%', left: '10%', maxWidth: '5%' }} className="mr-5" src="https://i.ibb.co/272NT0y/Logo-Small-Square-removebg-preview.png" alt="Logo-Small-Square-removebg-preview" border="0" />
+                <div className="container pt-4 pb-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
                     <Link className="navbar-brand" to="/" variants={children}>
                         <h3 className="rightenous" style={{ color: '#222335' }}>Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
                     </Link>

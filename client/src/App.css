@@ -6,7 +6,15 @@ body {
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    transition: 670ms;
 }
+
+.svgg {
+    width: 100%;
+    padding-bottom: 100%;
+    color: red;
+}
+
 
 .rightenous {
     font-family: 'Righteous', cursive;
@@ -70,7 +78,6 @@ body {
     border-radius: 15px;
     color: white;
 }
-
 
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Poppins', sans-serif; */
