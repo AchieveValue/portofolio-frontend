@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-import LazyLoad from 'react-lazyload';
 import anime from 'animejs';
-import { ArcherContainer, ArcherElement } from 'react-archer';
 
 import NavBar from './Navbar';
 
@@ -38,6 +36,12 @@ const LandingPage = () => {
             loop: true
         });
     })
+    
+    let [caretAnimationHandels] = useState([
+        useAnimation(),
+        useAnimation(),
+        useAnimation(),
+    ])
 
     useEffect(() => {
         caretAnimationHandels.map((caret, key) => {
@@ -50,14 +54,10 @@ const LandingPage = () => {
                     rotateZ: 0
                 })
             }
-        })
-    }, [opened])
 
-    let caretAnimationHandels = [
-        useAnimation(),
-        useAnimation(),
-        useAnimation(),
-    ]
+            return null;
+        })
+    }, [opened, caretAnimationHandels])
 
     return (
         <>
@@ -143,16 +143,3 @@ const LandingPage = () => {
 }
 
 export default LandingPage;
-
-{/* <div class="">
-    <ArcherContainer strokeColor="#AAAAAA">
-        <div className="d-flex align-items-center flex-column mb-3 justify-content-center w-100" style={{ height: '40vh' }}>
-            <ArcherElement relations={[{targetId: 'el2', targetAnchor: 'top', sourceAnchor: 'bottom'}]}>
-                <div class="mb-auto p-2 w-25 text-center" id="el1"></div>
-            </ArcherElement>
-            <ArcherElement id="el2">
-                <div class="p-2 w-25 text-center"></div>
-            </ArcherElement>
-        </div>
-    </ArcherContainer>
-</div> */}
