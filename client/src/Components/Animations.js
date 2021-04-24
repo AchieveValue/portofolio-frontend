@@ -8,6 +8,7 @@ const parent = {
             delay: 2,
             duration: 0.5,
             ease: "easeOut",
+            when: 'beforeChildren'
         }
     },
     exit: {
