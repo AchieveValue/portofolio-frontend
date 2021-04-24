@@ -28,6 +28,7 @@ function App() {
         </Route>
         <Route path='/services'>
           <Services />
+          <Footer />
         </Route>
         <Route path='/projects'>
           <ComingSoon />
