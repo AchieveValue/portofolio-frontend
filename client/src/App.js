@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      {/* <OneTimeLoading /> */}
+      <OneTimeLoading />
       <Switch location={location} key={location.key}>
         <Route path='/about'>
           <About/>

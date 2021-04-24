@@ -49,10 +49,10 @@ const NavBar = ({ dark }) => {
     if(dark) {
         return (
             <motion.div className="navbar" style={{ background: '#222335'}} variants={parent} initial="hidden" animate="show" exit="hidden">
-                <div className="container pt-4 pb-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0 py-3">
-                    <Link className="navbar-brand" to="/" variants={children}>
-                        <h3 className="rightenous text-light mb-0">Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
-                        <img style={{ maxWidth: '100px' }} src="https://i.ibb.co/272NT0y/Logo-Small-Square-removebg-preview.png" alt="Logo-Small-Square-removebg-preview" border="0"/>                
+                <div className="container pt-2 pb-2 d-flex align-items-center justify-content-center justify-content-lg-between flex-column flex-lg-row px-0">
+                    <Link className="navbar-brand d-flex align-items-center" to="/" variants={children}>
+                        <h3 className="rightenous text-light">Achieve<span style={{ color: '#E57016' }}>Value</span></h3>
+                        <img className="mb-0" style={{ maxWidth: '100px' }} src="https://i.ibb.co/272NT0y/Logo-Small-Square-removebg-preview.png" alt="Logo-Small-Square-removebg-preview" border="0"/>                
                     </Link>
                     <div className="w-50 d-flex justify-content-around justify-content-lg-end align-items-center mt-4 mt-lg-0" onMouseLeave={() => { setHoveredLink(location) }}>
                         <div className="d-flex text-light rightenous justify-content-between">
