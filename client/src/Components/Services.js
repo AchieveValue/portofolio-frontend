@@ -17,7 +17,7 @@ const Services = () => {
                         <p>Pick the plan that works best for your company</p>
                     </div>
                 </div>
-                <div className='d-flex w-100 mx-auto row justify-content-center align-items-center px-0 mt-5 mx-0 mb-5'>
+                <div className='d-flex w-100 mx-auto flex-column flex-lg-row row justify-content-center align-items-center px-0 mt-5 mx-0 mb-5'>
                     {/* card 1 */}
                     <div className='col-10 offset-1 col-md-5 col-lg-4 col-xl-2 offset-md-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-5 mb-5' style={{ background: '#222335', borderRadius: '40px', height:'' }}>
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/rvXtFVN/wind-2.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Front-end development</h5></div>
@@ -34,7 +34,7 @@ const Services = () => {
                         </div>
                     </div>
                     {/* card 2 */}
-                    <div className='col-10 offset-1 col-md-5 col-lg-4 col-xl-2 offset-md-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-xl-5 mb-5' style={{ background: '#222335', borderRadius: '40px' }}>
+                    <div className='col-10 col-md-5 col-lg-4 col-xl-2 offset-md-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-xl-5 mb-5' style={{ background: '#222335', borderRadius: '40px' }}>
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/52mK79v/wind-3.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Full website development</h5></div>
                 
                         <div className='mx-3 pb-5' style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.5)' }}>
@@ -52,7 +52,7 @@ const Services = () => {
                         </div>
                     </div>
                     {/* card 3 */}
-                    <div className='col-10 offset-1 col-md-5 col-lg-4 col-xl-2 offset-lg-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-xl-5 mb-5' style={{ background: '#222335', borderRadius: '40px' }}>
+                    <div className='col-10 col-md-5 col-lg-4 col-xl-2 offset-lg-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-xl-5 mb-5' style={{ background: '#222335', borderRadius: '40px' }}>
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/wyrJhb9/wind-1.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Back-end development</h5></div>
                 
                         <div className='mx-3 pb-5' style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.5)' }}>
