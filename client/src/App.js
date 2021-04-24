@@ -10,6 +10,7 @@ import ComingSoon from './Components/ComingSoon';
 import Error404 from './Components/Error404';
 import LandingPage from './Components/LandingPage';
 import Services from './Components/Services';
+import OneTimeLoading from './Components/OneTimeLoading';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      {/* <OneTimeLoading /> */}
       <Switch location={location} key={location.key}>
         <Route path='/about'>
           <About/>

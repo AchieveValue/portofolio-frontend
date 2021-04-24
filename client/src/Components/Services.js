@@ -22,14 +22,14 @@ const Services = () => {
                     <div className='col-10 offset-1 col-md-5 col-lg-4 col-xl-2 offset-md-0 px-0 d-flex flex-column text-light pt-1 shadow-lg mr-5 mb-5' style={{ background: '#222335', borderRadius: '40px', height:'' }}>
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/rvXtFVN/wind-2.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Front-end development</h5></div>
                         <div className='mx-3 pb-5' style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.5)' }}>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Web design</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Navigation</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and contact</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and contact</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain Set up</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Web Design</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Design implementation on the web</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Testing</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Deployment</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain linking</h6></div>
                             </div>
                         <div className='d-flex flex-column w-100 align-items-center justify-content-center'>    
-                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>$69.420 /hr</h4>
+                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
                             <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
                         </div>
                     </div>
@@ -38,14 +38,16 @@ const Services = () => {
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/52mK79v/wind-3.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Full website development</h5></div>
                 
                         <div className='mx-3 pb-5' style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.5)' }}>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Web design</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Data base</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Navigation</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and contact</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain Set up</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Web Design</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Design implementation on the web</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Server Development</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Database Integration</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and custom functionalities</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain linking</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Deployment</h6></div>
                             </div>
                         <div className='d-flex flex-column w-100 align-items-center justify-content-center'>
-                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>$500</h4>
+                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
                             <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
                         </div>
                     </div>
@@ -54,14 +56,12 @@ const Services = () => {
                         <div className='d-flex align-items-center mb-3 w-75'><img src='https://i.ibb.co/wyrJhb9/wind-1.png' alt="" className='m-3' /><h5 className='rightenous text-center'>Back-end development</h5></div>
                 
                         <div className='mx-3 pb-5' style={{ borderBottom: '2px solid rgba(255, 255, 255, 0.5)' }}>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Data base</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and contact</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain Set up</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain Set up</h6></div>
-                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain Set up</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Server Development</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Database Integration</h6></div>
+                                <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and custom functionalities</h6></div>
                             </div>
                         <div className='d-flex flex-column w-100 align-items-center justify-content-center'>
-                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>$200</h4>
+                            <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
                             <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
                         </div>
                     </div>
@@ -102,7 +102,6 @@ const Services = () => {
                                     <h5 className='poppins font-weight-light'>Marketing</h5> 
                                     <h5 className='poppins font-weight-light'>SEO</h5>
                                     <h5 className='poppins font-weight-light'>Bug fixing</h5>
-                                    <h5 className='poppins font-weight-light'>We fix if you crash it but it costs more than when we did it in the first time so better no crash it cause your wallet will get ripped in half and we don't want it.</h5>
                                 </div>
                             </div>
                         </div>
