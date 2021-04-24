@@ -137,8 +137,16 @@ const LandingPage = () => {
                                 </div>
                         </motion.div>
                 </div>
-                <div className="container-fluid mt-5" style={{ background: '#222335', height: '40vh' }}>
-                    .
+                <div className="container-fluid mt-5 text-light d-flex flex-column align-items-center justify-content-center py-5 text-center" style={{ background: '#222335' }}>
+                    <h3 className="poppins font-weight-bold">We belive in a smooth, enjoyable <br /> <span className="" style={{ color: '#E57016' }}>web experience</span></h3>
+                    <h6 className="poppins font-weight-light w-50 mt-4">We want to inovate as many websites as posible, because we want a more fast, happy and motivated world. And AchieveValue is built to help achieving this goal.</h6>
+                </div>
+                {/* <div className="container-fluid my-3 text-light d-flex flex-column align-items-center justify-content-center text-center"><img src="https://i.ibb.co/vXdjsF0/Group-54-Images.png" alt="Group-54-Images" border="0" style={{ maxWidth: '100%'}}/></div> */}
+                <div className="container-fluid text-light d-flex flex-column align-items-left justify-content-center py-5" style={{ background: '#222335' }}>
+                    <div className="container">
+                        <h5 className="rightenous" style={{ color: '#E57016' }}>FAQ</h5>
+                        <h4></h4>
+                    </div>
                 </div>
             </motion.div>
         </>
