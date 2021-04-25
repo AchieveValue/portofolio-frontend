@@ -79,5 +79,12 @@ body {
     color: white;
 }
 
+.contact::placeholder {
+    color: #ffff;
+    font-size: 1em; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Poppins', sans-serif; */
