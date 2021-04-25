@@ -7,9 +7,13 @@ const OneTimeLoading = () => {
     setTimeout(() => {
         wraper.start({
             opacity: 0,
-            zIndex: -1
         });
     }, 3500);
+    setTimeout(() => {
+        wraper.start({
+            zIndex: -1
+        });
+    }, 4000);
 
     return (
         <motion.div animate={wraper} className="bg-light d-flex flex align-items-center justify-content-center" style={{ zIndex: 3, position: 'fixed', top: 0, left: 0, height: '100vh', width: '100vw' }}>

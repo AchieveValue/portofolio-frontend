@@ -124,8 +124,8 @@ const LandingPage = () => {
                 <div className="container px-0 py-5 my-2 mx-0 d-flex align-items-center justify-content-center mx-auto">
                     <div className="row w-100 align-items-center">
                         <div className="col-12 col-lg-6 px-0 text-center text-lg-left">
-                            <h1 className="poppins font-weight-bolder display-4" style={{ color: '#222335' }}>Get you next gen website now</h1>
-                            <h5 className="poppins font-weight-light" style={{ fontSize: '1.1rem', color: '#18191F'}}>We are here to inovate, modernize and improve. Welcome the AchieveValue team. Get started now or know us better!</h5>
+                            <h1 className="poppins font-weight-bolder display-4" style={{ color: '#222335' }}>Get your next gen website now</h1>
+                            <h5 className="poppins font-weight-light" style={{ fontSize: '1.1rem', color: '#18191F'}}>We are here to innovate, modernize and improve. Welcome the AchieveValue team.</h5>
                             <button className="btn px-3 py-3 poppins font-weight-medium text-light mt-4" style={{ background: '#E57016' }}><h5 className="mb-0 font-weight-bold">Get started</h5></button>
                         </div>
                         <div className="col-6 flex-column justify-content-center align-items-end d-none d-lg-flex">
@@ -170,7 +170,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[1]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 2 &&(<motion.h5 key='2' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our obligation is to design the most simple, yet complex aplication. Our scope is to create a modern web, so we invest alot in creating our UI/UX designs. We also test it out in the real world before approving it, so you can be sure that what goes in the production is the highest quality. For reference we work in Figma and Adobe Ilustrator.</motion.h5>)}
+                                    {opened === 2 &&(<motion.h5 key='2' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our obligation is to design the most simple, yet complex application. Our scope is to create a modern web, so we invest alot in creating our UI/UX designs. We also test it out in the real world before approving it, so you can be sure that what goes in the production is the highest quality. For reference we work in Figma and Adobe Ilustrator.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5 ">
@@ -185,17 +185,17 @@ const LandingPage = () => {
                             <div className="mt-5 smoothResize">
                                 <motion.div whileHover={{ color: '#E57016', cursor: 'pointer' }} className="d-flex align-items-center" onClick={() => {if(opened === 4) setOpened(0); else setOpened(4)}}>
                                     <h3 className="poppins font-weight-light mr-4 mb-0">Maintenance</h3>
-                                    <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[2]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
+                                    <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[3]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 4 &&(<motion.h5 key='4' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">As we said we want you to have a very easy experience with us, that means our team also takes care of the application for years after it's release. If you want changes, find bugs or the technologie changes, you can let us now and it will be fixed in the least amunt of time possible.</motion.h5>)}
+                                    {opened === 4 &&(<motion.h5 key='4' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">As we said we want you to have a very easy experience with us, that means our team also takes care of the application for years after it's release. If you want changes, find bugs or the technology changes, you can let us now and it will be fixed in the least amunt of time possible.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                         </motion.div>
                     </div>
                 </LazyLoad>
                     <div className="container-fluid mt-5 text-light d-flex flex-column align-items-center justify-content-center py-5 text-center" style={{ background: '#222335' }}>
-                        <h3 className="poppins font-weight-bold">We belive in a smooth, enjoyable <br /> <span className="" style={{ color: '#E57016' }}>web experience</span></h3>
+                        <h3 className="poppins font-weight-bold">We believe in a smooth, enjoyable <br /> <span className="" style={{ color: '#E57016' }}>web experience</span></h3>
                         <h6 className="poppins font-weight-light w-50 mt-4 d-none d-lg-block">We want to inovate as many websites as posible, because we want a more fast, happy and motivated world. And AchieveValue is built to help achieving this goal.</h6>
                         <h6 className="poppins font-weight-light w-100 mt-4 d-block d-lg-none">We want to inovate as many websites as posible, because we want a more fast, happy and motivated world. And AchieveValue is built to help achieving this goal.</h6>
                     </div>
