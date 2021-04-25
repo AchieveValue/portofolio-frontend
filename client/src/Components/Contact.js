@@ -25,9 +25,8 @@ const Contact = () => {
 
     const handleNextStep = () => {
         let details = [...steps];
-        console.log(input.current.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g));
         if (details[step].placeholder === 'Email') {
-            if(input.current.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) === null){
+            if(input.current.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g) === null){
                 setErrors(details[step].placeholder + ' the email is invalid!');
                 return true;
             }
@@ -42,7 +41,6 @@ const Contact = () => {
         details[step].data = input.current.value;
         input.current.value = (details[step + 1].data ? details[step + 1].data  : '');
         setStep(last => ++last);
-        console.log(details);
         setSteps(details);
     }
     
@@ -51,13 +49,6 @@ const Contact = () => {
         input.current.value = steps[step-1].data;
     }
 
-    const handleKeyDown = (key) => {
-        if(key === 13) {
-            return true;
-        }
-        return;    
-    }
-    
     const handleSend = () => {
         let details = [...steps];
         if(input.current.value.length < 15 || input.current.value.length > 255){
@@ -73,10 +64,11 @@ const Contact = () => {
     return(
         <div style={{height: '100vh', witdh:'100vw', background: '#E57016'}}>
             <NavBar dark={false}/>
-            <motion.div className="" variants={parent} initial="hidden" animate="show">
+            <motion.div variants={parent} initial="hidden" animate="show">
                 <div className='container-fluid px-0' style={{marginTop:'7%'}}>
                     <div className='container h-25 pt-5 px-0 mb-3'>
-                        <h1 className="rightenous font-weight-bold text-white">Let’s talk <br /> Enter your project details</h1>
+                        <h4 className="rightenous text-white">Let’s talk</h4>
+                        <h1 className="poppins font-weight-bold text-white mb-5">Enter your details</h1>
                     </div>
                     <div className="w-100 container px-3 rounded-lg py-3 text-light poppins font-weight-bold d-flex justify-content-between align-items-center" style={{ background: '#C35B0B', fontSize: '1.4em', color: 'white' }}>
                         {(step > 0 ? <i className="fas fa-arrow-left" style={{ fontSize: '2em' }} onClick={() => { handleBackStep(); }}></i> : '')}
