@@ -16,7 +16,7 @@ const About = () => {
             id: 0,
             nume: 'Bunea Andrei',
             pozitie: 'Founder & Full Stack Developer',
-            descriere: `Hi, my name is Andrei and I am the founder of the AchieveValue team, but also a full-stack web developer. In the last 4 years, I have had the opportunity to understand the needs of this field. Therefore I commenced this team. The better enterprise focuses on the web-based realm than ever before, thus resulting in a very high demand for quality websites. We are here to sort out this and provide the fastest, contemporary and appealing digital products.`
+            descriere: `Hi, my name is Andrei and I am the founder of the AchieveValue team, but also a full-stack web developer. In the last 4 years, I have had the opportunity to understand the needs of this field. Therefore I started this team. The better enterprise focuses on the web-based realm than ever before, thus resulting in a very high demand for quality websites. We are here to sort out this and provide the fastest, contemporary and appealing digital products.`
         },
         {
             animate: useAnimation(),
@@ -37,7 +37,7 @@ const About = () => {
             id: 3,
             nume: 'Bîra Paola',
             pozitie: 'Project Manager & Social Media Expert',
-            descriere: `My name is Paola Bîra, I’m 18 years old and I am the project manager and social media expert of the team. I have the responsibility of planning and organizing a specific project and to make our service more accessible through social media. I am here to make this the dream team and to assure that our clients will get the best experience.`
+            descriere: `My name is Paola Bîra, I’m 18 years old and I am the project manager and social media expert of the team. I have the responsibility of planning and organizing the projects and making our service more accessible through social media. I am here to make this the dream team and to assure that our clients will get the best experience.`
         },
         {
             animate: useAnimation(),
