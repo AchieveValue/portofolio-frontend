@@ -29,8 +29,8 @@ const Services = () => {
                                     <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Domain linking</h6></div>
                                 </div>
                             <div className='d-flex flex-column w-100 align-items-center justify-content-center'>
-                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
-                                <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
+                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Price not yet set</h4>
+                                <a href="mailto:hey@achievevalue.tech" className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Get in touch</h5></a>
                             </div>
                         </div>
                         {/* card 2 */}
@@ -46,8 +46,8 @@ const Services = () => {
                                 <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Deployment</h6></div>
                             </div>  
                             <div className='d-flex flex-column w-100 align-items-center justify-content-center'>
-                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
-                                <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
+                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Price not yet set</h4>
+                                <a href="mailto:hey@achievevalue.tech" className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Get in touch</h5></a>
                             </div>
                         </div>
                         {/* card 3 */}
@@ -59,8 +59,8 @@ const Services = () => {
                                     <div className='mb-2 px-3 mt-2'><h6 className='poppins font-weight-light'><i className='fas fa-check-circle mr-4' style={{ color: '#32ba7c' }}></i>Newsletter and custom functionalities</h6></div>
                                 </div>
                             <div className='d-flex flex-column w-100 align-items-center justify-content-center'>
-                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Not set yet</h4>
-                                <button className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Learn More</h5></button>
+                                <h4 className='mt-4 mb-4 poppins font-weight-bold'>Price not yet set</h4>
+                                <a href="mailto:hey@achievevalue.tech" className='btn text-light poppins font-weight-regular w-100 py-2' style={{ background: '#E57016', borderRadius: '5px 5px 40px 40px' }}><h5 className='mb-0'>Get in touch</h5></a>
                             </div>
                         </div>
                     </div>

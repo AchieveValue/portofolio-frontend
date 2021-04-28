@@ -46,7 +46,7 @@ const LandingPage = () => {
         {
             id: 0,
             question: 'What are your areas of focus as a web design and development company?',
-            answer: `For us, the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does its best to create a smooth and flawless web experience for your users. \n \n \bBesides this, we also develop our designs in a technology that is suitable for the project (often MERN Stack).`,
+            answer: `For us, the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does its best to create a smooth and flawless web experience for your users. \n \nBesides this, we also develop our designs in a technology that is suitable for the project (often MERN Stack).`,
             active: false,
         },
         {
@@ -66,7 +66,7 @@ const LandingPage = () => {
             question: 'What process should I expect from your UX agency?',
             answer: `We like to have a more concentrated process, so your project will go through several phases:\n
 
-            <b>Discovery & Research</b>
+            Discovery & Research
             We like to start by better understanding the needs, requirements and purpose of your project. If possible, we'll also interview users in the target group to create the most appropriate solution. In some cases, we will also analyze your company's products so that our solution blends in perfectly.
             \n
             UI/UX Design
@@ -135,7 +135,7 @@ const LandingPage = () => {
                         <div className="col-12 col-lg-6 px-0 text-center text-lg-left">
                             <h1 className="poppins font-weight-bolder display-4" style={{ color: '#222335' }}>Get your next gen website now</h1>
                             <h5 className="poppins font-weight-light" style={{ fontSize: '1.1rem', color: '#18191F'}}>We are here to innovate, modernize and improve. Welcome the AchieveValue team.</h5>
-                            <button className="btn px-3 py-3 poppins font-weight-medium text-light mt-4" style={{ background: '#E57016' }} onClick={() => location.push('/contact')}><h5 className="mb-0 font-weight-bold">Get started</h5></button>
+                            <button className="btn px-3 py-3 poppins font-weight-medium text-light mt-4" style={{ background: '#E57016' }} onClick={() => location.push('/services')}><h5 className="mb-0 font-weight-bold">Get started</h5></button>
                         </div>
                         <div className="col-6 flex-column justify-content-center align-items-end d-none d-lg-flex">
                             <div className="d-block margin-auto text-center">
@@ -170,7 +170,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[0]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 1 &&(<motion.h5 key='1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our full-stack development team is working closely with the designing team. This smooth flow results in a clean, modern and fast UI, with the latest techologies (React.js, Framer-motion and Anime.js). Besides this we'll also develop the back-end of the app, this means you will get a full, working web app in the end, without making any effort, so you can focus you time on you company. </motion.h5>)}
+                                    {opened === 1 &&(<motion.h5 key='1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our full-stack development team is working closely with the designing team. This smooth flow results in a clean, modern and fast UI, with the latest technologies (React.js, Framer-motion and Anime.js). Besides this we'll also develop the back-end of the app, this means you will get a full, working web app in the end, without making any effort, so you can focus your time on your company.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5 ">
@@ -179,7 +179,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[1]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 2 &&(<motion.h5 key='2' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our obligation is to design the most simple, yet complex application. Our scope is to create a modern web, so we invest alot in creating our UI/UX designs. We also test it out in the real world before approving it, so you can be sure that what goes in the production is the highest quality. For reference we work in Figma and Adobe Ilustrator.</motion.h5>)}
+                                    {opened === 2 &&(<motion.h5 key='2' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our obligation is to design the most simple, yet complex application. Our scope is to create a modern web, so we invest a lot in creating our UI/UX designs. We also test it out in the real world before approving it, so you can be sure that what goes in the production is the highest quality. For reference, we work in Figma and Adobe Illustrator.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5 ">
@@ -188,7 +188,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[2]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 3 &&(<motion.h5 key='3' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Text coming soon. Sorry.</motion.h5>)}
+                                    {opened === 3 &&(<motion.h5 key='3' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">We also offer a comprehensive array of professional search engine optimization services to get your business more visibility in search using only trustworthy, future-proof SEO techniques. Besides this, you'll also get from us a marketing strategy that fits your needs.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5">
@@ -197,7 +197,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[3]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 4 &&(<motion.h5 key='4' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">As we said we want you to have a very easy experience with us, that means our team also takes care of the application for years after it's release. If you want changes, find bugs or the technology changes, you can let us now and it will be fixed in the least amunt of time possible.</motion.h5>)}
+                                    {opened === 4 &&(<motion.h5 key='4' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">As we said we want you to have a very easy experience with us, which means our team also takes care of the application for years after its release. If you want changes, find bugs or technology changes, you can let us know and it will be fixed in the least amount of time possible.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                         </motion.div>
@@ -205,8 +205,8 @@ const LandingPage = () => {
                 </LazyLoad>
                     <div className="container-fluid mt-5 text-light d-flex flex-column align-items-center justify-content-center py-5 text-center" style={{ background: '#222335' }}>
                         <h3 className="poppins font-weight-bold">We believe in a smooth, enjoyable <br /> <span className="" style={{ color: '#E57016' }}>web experience</span></h3>
-                        <h6 className="poppins font-weight-light w-50 mt-4 d-none d-lg-block">We want to inovate as many websites as posible, because we want a more fast, happy and motivated world. And AchieveValue is built to help achieving this goal.</h6>
-                        <h6 className="poppins font-weight-light w-100 mt-4 d-block d-lg-none">We want to inovate as many websites as posible, because we want a more fast, happy and motivated world. And AchieveValue is built to help achieving this goal.</h6>
+                        <h6 className="poppins font-weight-light w-50 mt-4 d-none d-lg-block">We want to innovate as many websites as possible because we want a more fast, happy, connected and motivated world. And AchieveValue is built to help to achieve this goal.</h6>
+                        <h6 className="poppins font-weight-light w-100 mt-4 d-block d-lg-none">We want to innovate as many websites as possible because we want a more fast, happy, connected and motivated world. And AchieveValue is built to help to achieve this goal.</h6>
                     </div>
                     <div className="container-fluid text-light d-flex flex-column align-items-left justify-content-center py-5" style={{ background: '#222335' }}>
                         <div className="container poppins">
