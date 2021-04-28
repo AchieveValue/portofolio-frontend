@@ -16,28 +16,28 @@ const About = () => {
             id: 0,
             nume: 'Bunea Andrei',
             pozitie: 'Founder & Full Stack Developer',
-            descriere: `Hi, my name is Andrei. I enjoy doing programming and entrepreneurship, and at the moment I am a Full Stack Web Developer and the leader of the team. I started AchieveValue because I believe in young peoples, like us. I think we can deliver original, fast and modern web based applications. I always like to learn and improve myself, but also I like to help others.`
+            descriere: `Hi, my name is Andrei and I am the founder of the AchieveValue team, but also a full-stack web developer. In the last 4 years, I have had the opportunity to understand the needs of this field. Therefore I started this team. The better enterprise focuses on the web-based realm than ever before, thus resulting in a very high demand for quality websites. We are here to sort out this and provide the fastest, contemporary and appealing digital products.`
         },
         {
             animate: useAnimation(),
             id: 1,
             nume: 'Jomaa Abbas',
             pozitie: 'Co-Founder & Full Stack Developer',
-            descriere: `Soon! `
+            descriere: `Hey there! I am Abbas. I’m currently one of Achieve Value’s co-founders and web developers. I’ve been in the field for the past three years, and I joined the team because I genuinely believe teenagers and young adults represent today’s society’s best division, as more and more next-visionary, risk-taking and passionate developers are able to build up and revivify businesses, in the online era.! `
         },
         {
             animate: useAnimation(),
             id: 2,
             nume: 'Kevin Porter',
             pozitie: 'Back-end Developer',
-            descriere: `Hello! I’m Kevin. I’m currently 18 years old, and I primarily write code for AV (AchieveValue’s) back-end. I joined the team so I could gain experience in a variety of fields, such as the back-end, front-end, UI design, and gain proficiency in working with other like-minded people. I’m never afraid to start a new project, or to learn a new skill, and I’ll always put my best foot forward so I can be the best at any task I do.`
+            descriere: `Hello! I’m Kevin. I’m currently 18 years old, and I primarily write code for AV (AchieveValue’s) back-end. I joined the team so I could gain experience in a variety of fields, such as the back-end, front-end, UI design, and gain proficiency in working with other like-minded people. I’m never afraid to start a new project or to learn a new skill, and I’ll always put my best foot forward so I can be the best at any task I do.`
         },
         {
             animate: useAnimation(),
             id: 3,
             nume: 'Bîra Paola',
             pozitie: 'Project Manager & Social Media Expert',
-            descriere: `My name is Paola Bîra, I’m 18 years old and I am the project manager and social media expert of the team. I have the responsibility of planning and organizing a specific project and to make our service more accessible through social media. I am here to make this the dream team and to assure that our clients will get the best experience.`
+            descriere: `My name is Paola Bîra, I’m 18 years old and I am the project manager and social media expert of the team. I have the responsibility of planning and organizing the projects and making our service more accessible through social media. I am here to make this the dream team and to assure that our clients will get the best experience.`
         },
         {
             animate: useAnimation(),

@@ -6,8 +6,11 @@ import { Switch, Route, useLocation} from "react-router-dom";
 // Componenets
 import About from './Components/About';
 import Footer from './Components/Footer'
-import ComingSoon from './Components/ComingSoon'
-import Error404 from './Components/Error404'
+import ComingSoon from './Components/ComingSoon';
+import Error404 from './Components/Error404';
+import LandingPage from './Components/LandingPage';
+import Services from './Components/Services';
+import OneTimeLoading from './Components/OneTimeLoading';
 
 
 function App() {
@@ -19,21 +22,26 @@ function App() {
 
   return (
     <>
+      <OneTimeLoading />
       <Switch location={location} key={location.key}>
         <Route path='/about'>
           <About/>
           <Footer />
         </Route>
         <Route path='/services'>
-          <ComingSoon />
+          <Services />
           <Footer />
         </Route>
         <Route path='/projects'>
           <ComingSoon />
           <Footer />
         </Route>
-        <Route path='/'>
-          <ComingSoon/>
+        <Route path='/contact'>
+          <ComingSoon />
+          <Footer />
+        </Route>
+        <Route path='/' exact>
+          <LandingPage />
           <Footer />
         </Route>
         <Route>
