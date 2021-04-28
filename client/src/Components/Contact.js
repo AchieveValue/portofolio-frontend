@@ -7,11 +7,11 @@ import NavBar from './Navbar';
 import parent from './Animations';
 
 const Contact = () => {
-    const buttons = [
+    const [buttons] = useState([
         useAnimation(),
         useAnimation(),
         useAnimation(),
-    ];
+    ]);
     const [selected, setSelected] = useState(0);
 
     useEffect(() => {
@@ -35,8 +35,10 @@ const Contact = () => {
                     }
                 })
             }
+
+            return null;
         })
-    }, [selected])
+    }, [selected, buttons])
 
     const email = useRef('');
     const firstName = useRef('');
@@ -48,7 +50,7 @@ const Contact = () => {
     const checkData = () => {
         if(email.current.value.length < 3)
             setErrors(...errors, 'The email must be longer than 3 characters')
-        if(email.current.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+        if(email.current.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g))
             setErrors(...errors, 'The email is invalid')
         if(firstName.current.value.length > 200)
             setErrors(...errors, 'The email must not be longer than 200 characters')

@@ -46,13 +46,13 @@ const LandingPage = () => {
         {
             id: 0,
             question: 'What are your areas of focus as a web design and development company?',
-            answer: `For us, the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does its best to create a smooth and flawless web experience for your users. \n \nBesides this, we also develop our designs in a technology that is suitable for the project (often MERN Stack).`,
+            answer: `For us, the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does its best to create a smooth and flawless web experience for your users. \n \n \bBesides this, we also develop our designs in a technology that is suitable for the project (often MERN Stack).`,
             active: false,
         },
         {
             id: 1,
             question: 'How much it would cost if I hire you?',
-            answer: `The expected costs change depending on what features your website will require. We strongly recommend to contact us, but in the meantime, you can take a look at the Services section.`,
+            answer: `Our pricing is directly associated with the project scope, timeline, budget and requirements. However, most of our services are fixed‑price. In this case, we’ll give you a detailed proposal after learning as much as possible about your project. If you have a project, please email us to get a more precise offer.`,
             active: false,
         },
         {
@@ -64,7 +64,16 @@ const LandingPage = () => {
         {
             id: 3,
             question: 'What process should I expect from your UX agency?',
-            answer: `The first step is to contact us as soon as possible. After that, you should expect a message from us within 24 hours. We will negotiate the price and we will require you to create a business requirements file. We'll remain in contact throughout the whole process.`,
+            answer: `We like to have a more concentrated process, so your project will go through several phases:\n
+
+            <b>Discovery & Research</b>
+            We like to start by better understanding the needs, requirements and purpose of your project. If possible, we'll also interview users in the target group to create the most appropriate solution. In some cases, we will also analyze your company's products so that our solution blends in perfectly.
+            \n
+            UI/UX Design
+            We will start the design stage with the things learned earlier in mind. We like to create more prototypes, usually 2-3. You will have the final decision on which one to use, but we will also ask for opinions from the target group of your project. We will take care to have a mobile-friendly design because we know how important this is.
+            \n
+            Development
+            In this stage, your project will be divided into 2 categories: frontend and backend. We develop these two categories separately and in the end, we combine them. We will test everything before we deliver the completed project to you, to make sure that everything goes as it should.`,
             active: false,
         }
     ]);
@@ -99,6 +108,7 @@ const LandingPage = () => {
         anime({
             targets: '.animatedCircle',
             d: [
+            { value: ComplexPath[1] },
             { value: ComplexPath[2] },
             { value: ComplexPath[1] },
             //   { value: ComplexPath[2] },
@@ -165,7 +175,7 @@ const LandingPage = () => {
                             </div>
                             <div className="mt-5 ">
                                 <motion.div whileHover={{ color: '#E57016', cursor: 'pointer' }} className="d-flex align-items-center" onClick={() => {if(opened === 2) setOpened(0); else setOpened(2)}}>
-                                    <h3 className="poppins font-weight-light mr-4 mb-0">UI/UX Design</h3>
+                                    <h3 className="poppins font-weight-light mr-4 mb-0">Web Design</h3>
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[1]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>

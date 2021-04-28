@@ -10,7 +10,6 @@ import ComingSoon from './Components/ComingSoon';
 import Error404 from './Components/Error404';
 import LandingPage from './Components/LandingPage';
 import Services from './Components/Services';
-import Contact from './Components/Contact';
 import OneTimeLoading from './Components/OneTimeLoading';
 
 
@@ -38,7 +37,8 @@ function App() {
           <Footer />
         </Route>
         <Route path='/contact'>
-          <Contact />
+          <ComingSoon />
+          <Footer />
         </Route>
         <Route path='/' exact>
           <LandingPage />
