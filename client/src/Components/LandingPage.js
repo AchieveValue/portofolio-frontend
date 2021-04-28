@@ -70,7 +70,7 @@ const LandingPage = () => {
             We like to start by better understanding the needs, requirements and purpose of your project. If possible, we'll also interview users in the target group to create the most appropriate solution. In some cases, we will also analyze your company's products so that our solution blends in perfectly.
             \n
             UI/UX Design
-            We will start the design stage with the things learned earlier in mind. We like to create more prototypes, usually 2-3. You will have the final decision on which one to use, but we will also ask for opinions from the target group of your project. We will take care to have a mobile-friendly design because we know how important this is.
+            We will start the design stage with the things learned earlier in mind. We aim to create a minimum of 2-3 prototypes. You will have the final decision on which one to use, but we will also ask for opinions from the target group of your project. We also ensure that our website is mobile-friendly, because we know how important that is.
             \n
             Development
             In this stage, your project will be divided into 2 categories: frontend and backend. We develop these two categories separately and in the end, we combine them. We will test everything before we deliver the completed project to you, to make sure that everything goes as it should.`,
@@ -170,7 +170,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[0]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 1 &&(<motion.h5 key='1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our full-stack development team is working closely with the designing team. This smooth flow results in a clean, modern and fast UI, with the latest technologies (React.js, Framer-motion and Anime.js). Besides this we'll also develop the back-end of the app, this means you will get a full, working web app in the end, without making any effort, so you can focus your time on your company.</motion.h5>)}
+                                    {opened === 1 &&(<motion.h5 key='1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Our full-stack development team is working closely with the designing team. This smooth flow results in a clean, modern and fast UI, with the latest technologies (React.js, Framer-motion and Anime.js). We'll also do the back-end of the app, which means you will get a finished, unique web app, fit to your needs, with little effort from you</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5 ">
@@ -188,7 +188,7 @@ const LandingPage = () => {
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[2]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
                                 </motion.div>
                                 <AnimatePresence exitBeforeEnter>
-                                    {opened === 3 &&(<motion.h5 key='3' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">We also offer a comprehensive array of professional search engine optimization services to get your business more visibility in search using only trustworthy, future-proof SEO techniques. Besides this, you'll also get from us a marketing strategy that fits your needs.</motion.h5>)}
+                                    {opened === 3 &&(<motion.h5 key='3' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">We also offer a comprehensive array of professional SEO (Search Engine Optimization) services to get your business the most visibility, using the industry standard SEO techniques. We also know a multitude of marketing strategies that will fit your needs.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
                             <div className="mt-5">
