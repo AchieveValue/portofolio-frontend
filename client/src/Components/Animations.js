@@ -5,8 +5,8 @@ const parent = {
     show: {
         opacity: 1,
         transition: {
-            delay: 2.5,
-            duration: 0.5,
+            delay: 1.8,
+            duration: 0.3,
             ease: "easeOut",
             when: 'beforeChildren'
         }

@@ -40,7 +40,7 @@ function App() {
         <Route path='/contact'>
           <Contact />
         </Route>
-        <Route path='/'>
+        <Route path='/' exact>
           <LandingPage />
           <Footer />
         </Route>

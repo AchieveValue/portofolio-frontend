@@ -23,7 +23,7 @@ const About = () => {
             id: 1,
             nume: 'Jomaa Abbas',
             pozitie: 'Co-Founder & Full Stack Developer',
-            descriere: `Soon! `
+            descriere: `Hey there! I am Abbas. I’m currently one of Achieve Value’s co-founders and web developers. I’ve been in the field for the past three years, and I joined the team because I genuinely believe teenagers and young adults represent today’s society’s best division, as more and more next-visionary, risk-taking and passionate developers are able to build up and revivify businesses, in the online era.! `
         },
         {
             animate: useAnimation(),

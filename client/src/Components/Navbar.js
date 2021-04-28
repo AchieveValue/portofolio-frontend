@@ -20,11 +20,11 @@ const NavBar = ({ dark }) => {
         show: {
             opacity: 1,
             transition: {
-                duration: 0.5,
-                delay: 0.5,
+                duration: 0.2,
+                delay: 0.2,
                 ease: "easeOut",
                 when: "beforeChildren",
-                staggerChildren: 0.4,
+                staggerChildren: 0.3,
             }
         }
     }

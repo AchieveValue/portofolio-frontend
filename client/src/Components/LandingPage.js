@@ -3,17 +3,22 @@ import '../App.css';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import anime from 'animejs';
 import LazyLoad from 'react-lazyload';
-
+import { useHistory } from 'react-router-dom';
 
 import NavBar from './Navbar';
 
 import parent from './Animations';
 
 const LandingPage = () => {    
+    const location = useHistory();
+
     // Our services handing varibale
     const [opened, setOpened] = useState(0);
 
     let [caretAnimationHandels] = useState([
+        useAnimation(),
+        useAnimation(),
+        useAnimation(),
         useAnimation(),
         useAnimation(),
         useAnimation(),
@@ -41,31 +46,25 @@ const LandingPage = () => {
         {
             id: 0,
             question: 'What are your areas of focus as a web design and development company?',
-            answer: `For us the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does it’s best to create a smooth and flowless web experience for your users. \n \nBesides this, we also develop our designs in a techology that is suitable for the project (often MERN Stack).`,
+            answer: `For us, the user experience is the most important aspect when we do our designs. Keeping this in mind, our agency does its best to create a smooth and flawless web experience for your users. \n \nBesides this, we also develop our designs in a technology that is suitable for the project (often MERN Stack).`,
             active: false,
         },
         {
             id: 1,
-            question: 'How can you acheive what you said?',
-            answer: `Text coming soon! Sorry.`,
+            question: 'How much it would cost if I hire you?',
+            answer: `The expected costs change depending on what features your website will require. We strongly recommend to contact us, but in the meantime, you can take a look at the Services section.`,
             active: false,
         },
         {
             id: 2,
-            question: 'How much it would cost if I hire you?',
-            answer: `Text coming soon! Sorry.`,
+            question: 'What is the estimated time of response?',
+            answer: `We try our best to respond within 24 hours with a detailed plan and a fixed price.`,
             active: false,
         },
         {
             id: 3,
-            question: 'How can I get a proposal for my project?',
-            answer: `Text coming soon! Sorry.`,
-            active: false,
-        },
-        {
-            id: 4,
             question: 'What process should I expect from your UX agency?',
-            answer: `Text coming soon! Sorry.`,
+            answer: `The first step is to contact us as soon as possible. After that, you should expect a message from us within 24 hours. We will negotiate the price and we will require you to create a business requirements file. We'll remain in contact throughout the whole process.`,
             active: false,
         }
     ]);
@@ -126,7 +125,7 @@ const LandingPage = () => {
                         <div className="col-12 col-lg-6 px-0 text-center text-lg-left">
                             <h1 className="poppins font-weight-bolder display-4" style={{ color: '#222335' }}>Get your next gen website now</h1>
                             <h5 className="poppins font-weight-light" style={{ fontSize: '1.1rem', color: '#18191F'}}>We are here to innovate, modernize and improve. Welcome the AchieveValue team.</h5>
-                            <button className="btn px-3 py-3 poppins font-weight-medium text-light mt-4" style={{ background: '#E57016' }}><h5 className="mb-0 font-weight-bold">Get started</h5></button>
+                            <button className="btn px-3 py-3 poppins font-weight-medium text-light mt-4" style={{ background: '#E57016' }} onClick={() => location.push('/contact')}><h5 className="mb-0 font-weight-bold">Get started</h5></button>
                         </div>
                         <div className="col-6 flex-column justify-content-center align-items-end d-none d-lg-flex">
                             <div className="d-block margin-auto text-center">
@@ -182,7 +181,7 @@ const LandingPage = () => {
                                     {opened === 3 &&(<motion.h5 key='3' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: 110, opacity: 0 }} transition={{ duration: 0.4, delay: 0.5, ease: 'easeInOut' }} className="poppins font-weight-light mt-4 mb-0 w-100">Text coming soon. Sorry.</motion.h5>)}
                                 </AnimatePresence>
                             </div>
-                            <div className="mt-5 smoothResize">
+                            <div className="mt-5">
                                 <motion.div whileHover={{ color: '#E57016', cursor: 'pointer' }} className="d-flex align-items-center" onClick={() => {if(opened === 4) setOpened(0); else setOpened(4)}}>
                                     <h3 className="poppins font-weight-light mr-4 mb-0">Maintenance</h3>
                                     <motion.i className="fas fa-angle-down" animate={caretAnimationHandels[3]} transition={{ duration: 0.5, ease: 'backInOut' }}></motion.i>
