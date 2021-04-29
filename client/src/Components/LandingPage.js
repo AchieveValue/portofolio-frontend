@@ -10,7 +10,7 @@ import NavBar from './Navbar';
 import parent from './Animations';
 
 const LandingPage = () => {    
-    let fuckYouVercelCauseYouAreStupidSometimes;
+    let fuckYouVercelCauseYouAreStupidSometimes
     const location = useHistory();
 
     // Our services handing varibale
