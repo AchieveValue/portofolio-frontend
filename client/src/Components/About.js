@@ -49,6 +49,93 @@ const About = () => {
     ]);
     const [selectedTeamate, setSelectedTeamate] = useState(ourTeamContent[0]);
 
+    const progressBar = useAnimation();
+    const [selectedCheckPoint, setSelectedCheckPoint] = useState(1);
+    const checkpoints = [
+        {
+            title: 'The beginings',
+            content: 'This was a big year, when all it started. We had a lot of fun but still learning a lot in the field of programming.',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmeber',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'November',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmber',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmber',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmber',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmber',
+            year: '2016'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'Novmber',
+            year: '2016'
+        },
+    ];
+    useEffect(() => {
+        progressBar.start({
+            width: (selectedCheckPoint * 8.33333333) + "%",
+            transtition: {
+                duration: 1,
+                delay: 0.2,
+                ease: 'easeInOut'
+            }
+        })
+    })
+
     useEffect(() => {
         [...ourTeamContent].map(el => {
             if(el.id === selectedTeamate.id) {
@@ -178,6 +265,39 @@ const About = () => {
                     </motion.div>
                 </div>
             </LazyLoad>
+
+            <div className="container-fluid py-5" style={{ background: '#15141A' }}>
+                <div className="container py-5">
+                    <div className="row mb-3 w-100 px-0">
+                        <div className={`col-1 offset-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
+                            <h4 className="rightenous text-light" style={{ whiteSpace: 'nowrap'}}>{checkpoints[selectedCheckPoint-1].title}</h4>
+                            <h6 className="poppins text-light" style={{ fontWeight: 200, whiteSpace: 'nowrap'}}>{checkpoints[selectedCheckPoint-1].content}</h6>
+                            <svg width="1" height="38" viewBox="0 0 1 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="align-self-center">
+                                <line x1="0.5" y1="38" x2="0.500002" y2="-2.18557e-08" stroke="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div className="w-100 row py-2 px-0 row" style={{ background: 'white', borderRadius: '50px', position: 'relative', overflow: 'hidden' }}>
+                        {
+                            checkpoints.map((checkpoint, key) => {
+                                return <div className="col-1 d-flex justify-content-center px-0" style={{ zIndex: 1 }} onClick={() => {setSelectedCheckPoint(key + 1)}}><i className="fas fa-circle px-0" style={{ color: (selectedCheckPoint >= key + 1 ? 'white' : '#E57035'), fontSize: '1.05em' }}></i></div>
+                            })
+                        }
+
+                        <motion.div className="position-absolute py-1 px-5" style={{ background: '#E57016', borderRadius: '50px', position: 'absolute', left: 0, top: 0, zIndex: 0, width: '4%', height: '100%' }} animate={progressBar}>
+                        </motion.div>
+                        
+                    </div>
+                    <div className="row w-100 px-0 mt-3">
+                        <div className={`col-1 offset-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
+                            <svg width="1" height="23" viewBox="0 0 1 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="align-self-center">
+                                <line x1="0.5" y1="23" x2="0.5" stroke="#E57016"/>
+                            </svg>
+                            <h5 className="text-light rightenous mt-2" style={{ fontWeight: 200, whiteSpace: 'nowrap'}}>{checkpoints[selectedCheckPoint-1].month} <span style={{ color: '#E57016' }}>{checkpoints[selectedCheckPoint-1].year}</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </motion.div>
         </>
     )
