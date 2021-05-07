@@ -54,84 +54,85 @@ const About = () => {
     const checkpoints = [
         {
             title: 'The beginings',
-            content: 'This was a big year, when all it started. We had a lot of fun but still learning a lot in the field of programming.',
+            content: 'This was a big year, when all it started.: We had a lot of fun but still learning a lot in: the field of programming.',
             month: 'November',
             year: '2016'
         },
         {
             title: 'The beginings',
             content: 'The moment it all started',
-            month: 'November',
-            year: '2016'
+            month: 'January',
+            year: '2017'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'March',
+            year: '2017'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'June',
+            year: '2017'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'July',
+            year: '2017'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'February',
+            year: '2018'
         },
         {
             title: 'The beginings',
             content: 'The moment it all started',
             month: 'November',
-            year: '2016'
+            year: '2018'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'March',
+            year: '2019'
+        },
+        {
+            title: 'The beginings',
+            content: 'The moment it all started',
+            month: 'December',
+            year: '2019'
         },
         {
             title: 'The beginings',
             content: 'The moment it all started',
             month: 'November',
-            year: '2016'
+            year: '2020'
         },
         {
             title: 'The beginings',
             content: 'The moment it all started',
-            month: 'November',
-            year: '2016'
+            month: 'March',
+            year: '2021'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmeber',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'November',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmber',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmber',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmber',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmber',
-            year: '2016'
-        },
-        {
-            title: 'The beginings',
-            content: 'The moment it all started',
-            month: 'Novmber',
-            year: '2016'
+            title: 'The present',
+            content: 'We started developing this webiste:adadadadadadadadadadadadadad:',
+            month: 'April',
+            year: '2021'
         },
     ];
     useEffect(() => {
         progressBar.start({
-            width: (selectedCheckPoint * 8.33333333) + "%",
-            transtition: {
-                duration: 1,
-                delay: 0.2,
-                ease: 'easeInOut'
+            width: (width > 900 ? (selectedCheckPoint * 8.33333333 + "%") : "0%"),
+            transition: {
+                duration: 1.5,
+                delay: 0.02,
+                ease: 'backInOut',
+                type: 'spring'
             }
         })
     })
@@ -223,7 +224,7 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://cdn.discordapp.com/attachments/462194883097001994/834362672085598238/Screenshot_17.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
@@ -241,7 +242,7 @@ const About = () => {
                                 <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://cdn.discordapp.com/attachments/462194883097001994/834362672085598238/Screenshot_17.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
@@ -264,32 +265,38 @@ const About = () => {
                         </motion.div>
                     </motion.div>
                 </div>
-            </LazyLoad>
+            </LazyLoad>{console.log(checkpoints[selectedCheckPoint-1].content.split(':'))}
 
-            <div className="container-fluid py-5" style={{ background: '#15141A' }}>
-                <div className="container py-5">
-                    <div className="row mb-3 w-100 px-0">
-                        <div className={`col-1 offset-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
-                            <h4 className="rightenous text-light" style={{ whiteSpace: 'nowrap'}}>{checkpoints[selectedCheckPoint-1].title}</h4>
-                            <h6 className="poppins text-light" style={{ fontWeight: 200, whiteSpace: 'nowrap'}}>{checkpoints[selectedCheckPoint-1].content}</h6>
+            <div className="container-fluid py-5 d-none d-lg-block" style={{ background: '#15141A' }}>
+                <div className="container py-5 w-100 p-0">
+                    <h2 className="rightenous text-light mb-2 mt-5 text-center">Our <span style={{ color: '#E57016' }}>story</span></h2>
+                    <p className="poppins font-weight-lighter w-25 text-light mb-5 text-center mx-auto d-none d-lg-block">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
+                    <p className="poppins font-weight-lighter w-75 text-light mb-5 text-center mx-auto d-block d-lg-none">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
+                    
+                    <div className="row mb-3 w-100 px-0 mx-0">
+                        <div className={`col-12 col-lg-1 text-center text-lg-left offset-0 offset-lg-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
+                            <h4 className="rightenous text-light" style={{ whiteSpace: 'noWrap'}}>{checkpoints[selectedCheckPoint-1].title}</h4>
+                            <h6 className="poppins text-light w-100 d-none d-lg-block" style={{ fontWeight: 200, whiteSpace: 'noWrap' }}>{checkpoints[selectedCheckPoint-1].content.split(':').map(el => { return <>{el}<br /></> })}</h6>
+                            <h6 className="poppins text-light w-100 d-block d-lg-none" style={{ fontWeight: 200 }}>{checkpoints[selectedCheckPoint-1].content}</h6>
                             <svg width="1" height="38" viewBox="0 0 1 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="align-self-center">
                                 <line x1="0.5" y1="38" x2="0.500002" y2="-2.18557e-08" stroke="white"/>
                             </svg>
                         </div>
                     </div>
-                    <div className="w-100 row py-2 px-0 row" style={{ background: 'white', borderRadius: '50px', position: 'relative', overflow: 'hidden' }}>
+
+                    <div className="w-100 row py-2 px-0 row mx-0" style={{ background: 'white', borderRadius: '50px', position: 'relative', overflow: 'hidden' }}>
                         {
                             checkpoints.map((checkpoint, key) => {
-                                return <div className="col-1 d-flex justify-content-center px-0" style={{ zIndex: 1 }} onClick={() => {setSelectedCheckPoint(key + 1)}}><i className="fas fa-circle px-0" style={{ color: (selectedCheckPoint >= key + 1 ? 'white' : '#E57035'), fontSize: '1.05em' }}></i></div>
+                                return <div className="col-1 d-flex justify-content-center px-0" key={key} style={{ zIndex: 1 }} onClick={() => {setSelectedCheckPoint(key + 1)}}><i className="fas fa-circle px-0" style={{ color: (selectedCheckPoint >= key + 1 ? 'white' : '#E57035')}}></i></div>
                             })
                         }
 
-                        <motion.div className="position-absolute py-1 px-5" style={{ background: '#E57016', borderRadius: '50px', position: 'absolute', left: 0, top: 0, zIndex: 0, width: '4%', height: '100%' }} animate={progressBar}>
+                        <motion.div className="position-absolute py-1 px-5" style={{ background: '#E57016', borderRadius: '50px', position: 'absolute', left: 0, top: 0, zIndex: 0, height: '100%', width: '0%' }} animate={progressBar}>
                         </motion.div>
-                        
                     </div>
-                    <div className="row w-100 px-0 mt-3">
-                        <div className={`col-1 offset-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
+
+                    <div className="row w-100 px-0 mt-3 mx-0">
+                        <div className={`col-12 col-lg-1 text-center text-lg-left offset-0 offset-lg-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
                             <svg width="1" height="23" viewBox="0 0 1 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="align-self-center">
                                 <line x1="0.5" y1="23" x2="0.5" stroke="#E57016"/>
                             </svg>
