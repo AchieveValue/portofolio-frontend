@@ -21,27 +21,20 @@ const About = () => {
         {
             animate: useAnimation(),
             id: 1,
-            nume: 'Jomaa Abbas',
-            pozitie: 'Co-Founder & Full Stack Developer',
-            descriere: `Hey there! I am Abbas. I’m currently one of Achieve Value’s co-founders and web developers. I’ve been in the field for the past three years, and I joined the team because I genuinely believe teenagers and young adults represent today’s society’s best division, as more and more next-visionary, risk-taking and passionate developers are able to build up and revivify businesses, in the online era.! `
-        },
-        {
-            animate: useAnimation(),
-            id: 2,
             nume: 'Kevin Porter',
             pozitie: 'Back-end Developer',
             descriere: `Hello! I’m Kevin. I’m currently 18 years old, and I primarily write code for AV (AchieveValue’s) back-end. I joined the team so I could gain experience in a variety of fields, such as the back-end, front-end, UI design, and gain proficiency in working with other like-minded people. I’m never afraid to start a new project or to learn a new skill, and I’ll always put my best foot forward so I can be the best at any task I do.`
         },
         {
             animate: useAnimation(),
-            id: 3,
+            id: 2,
             nume: 'Bîra Paola',
             pozitie: 'Project Manager & Social Media Expert',
             descriere: `My name is Paola Bîra, I’m 18 years old and I am the project manager and social media expert of the team. I have the responsibility of planning and organizing the projects and making our service more accessible through social media. I am here to make this the dream team and to assure that our clients will get the best experience.`
         },
         {
             animate: useAnimation(),
-            id: 4,
+            id: 3,
             nume: 'Denisa Bodea',
             pozitie: 'Graphic & UI Designer',
             descriere: `Hello! My name is Denisa, I’m 17 years old and I am the graphic designer of the team. I love to put my creativity into our projects, illustrate them and see the result of my work. I joined this team in order to develop skills in this field and evolve along with the team. I am ready to use my knowledge to create proper designs and learn new things to implement.`
@@ -127,7 +120,7 @@ const About = () => {
     ];
     useEffect(() => {
         progressBar.start({
-            width: (width > 900 ? (selectedCheckPoint * 8.33333333 + "%") : "0%"),
+            width: (selectedCheckPoint * 8.33333333 + "%"),
             transition: {
                 duration: 1.5,
                 delay: 0.02,
@@ -135,7 +128,7 @@ const About = () => {
                 type: 'spring'
             }
         })
-    })
+    }, [selectedCheckPoint, progressBar])
 
     useEffect(() => {
         [...ourTeamContent].map(el => {
@@ -218,37 +211,31 @@ const About = () => {
                         </div>
                         <div className="container w-100 row align-items-center justify-content-center d-none d-md-flex" style={{ height: '18vh' }}>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp3.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1629331200&v=beta&t=jIZcG2y9P6pDg-rKO61yhmRn7-bIqG8mH_MBKub6Wew')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[1])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
-                            </div>
-                            <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
 
                         <div className="container w-100 row d-flex align-items-center justify-content-center d-md-none" style={{ height: '18vh' }}>
                             <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1623283200&v=beta&t=3gjA5xqTpGtaEACsE9_FZpsqxFiYkZl4XYkBHugqwW0')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp3.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1629331200&v=beta&t=jIZcG2y9P6pDg-rKO61yhmRn7-bIqG8mH_MBKub6Wew')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[1])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQHQAp2ZHQ0k8Q/profile-displayphoto-shrink_200_200/0/1618498524576?e=1623888000&v=beta&t=C7swUFbL_b8UFSR_khVTXobGJCao9NVHZ0jcQ8cXeno')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
-                            <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                            <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
+                                <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                             <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
-                                <motion.div className="rounded-circle" animate={ourTeamContent[3].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
-                            </div>
-                            <div className="col-4 pt-4" onClick={() => {setSelectedTeamate(ourTeamContent[4])}}>
-                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[4].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
+                                <motion.div className="rounded-circle bg-light" animate={ourTeamContent[3].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 4 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
                     </motion.div>
@@ -267,8 +254,8 @@ const About = () => {
                 </div>
             </LazyLoad>{console.log(checkpoints[selectedCheckPoint-1].content.split(':'))}
 
-            <div className="container-fluid py-5 d-none d-lg-block" style={{ background: '#15141A' }}>
-                <div className="container py-5 w-100 p-0">
+            <div className="container-fluid py-5 d-block d-lg-block" style={{ background: '#15141A' }}>
+                <div className={(width < 100 ? '' : 'container') + " py-5 w-100 p-0"}>
                     <h2 className="rightenous text-light mb-2 mt-5 text-center">Our <span style={{ color: '#E57016' }}>story</span></h2>
                     <p className="poppins font-weight-lighter w-25 text-light mb-5 text-center mx-auto d-none d-lg-block">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
                     <p className="poppins font-weight-lighter w-75 text-light mb-5 text-center mx-auto d-block d-lg-none">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
@@ -284,14 +271,14 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="w-100 row py-2 px-0 row mx-0" style={{ background: 'white', borderRadius: '50px', position: 'relative', overflow: 'hidden' }}>
+                    <div className="w-100 row py-2 px-0 row mx-0" style={{ background: 'white', borderRadius: '50px', position: 'relative' }}>
                         {
                             checkpoints.map((checkpoint, key) => {
                                 return <div className="col-1 d-flex justify-content-center px-0" key={key} style={{ zIndex: 1 }} onClick={() => {setSelectedCheckPoint(key + 1)}}><i className="fas fa-circle px-0" style={{ color: (selectedCheckPoint >= key + 1 ? 'white' : '#E57035')}}></i></div>
                             })
                         }
 
-                        <motion.div className="position-absolute py-1 px-5" style={{ background: '#E57016', borderRadius: '50px', position: 'absolute', left: 0, top: 0, zIndex: 0, height: '100%', width: '0%' }} animate={progressBar}>
+                        <motion.div className="position-absolute py-1 px-0" style={{ background: '#E57016', borderRadius: '50px', position: 'absolute', left: 0, top: 0, zIndex: 0, height: '100%' }} animate={progressBar}>
                         </motion.div>
                     </div>
 
