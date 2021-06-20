@@ -46,74 +46,74 @@ const About = () => {
     const [selectedCheckPoint, setSelectedCheckPoint] = useState(1);
     const checkpoints = [
         {
-            title: 'The beginings',
-            content: 'This was a big year, when all it started.: We had a lot of fun but still learning a lot in: the field of programming.',
+            title: 'The beginning',
+            content: 'That\'s when it all started, when we started making appointments, for fun, but at least we started.',
             month: 'November',
             year: '2016'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Playground',
+            content: 'The moment when I realized how fun but also interesting is the programming. We still have a lot of fun and don\'t realize that we are making progress, but we continue to learn more and more.',
             month: 'January',
             year: '2017'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Dream',
+            content: 'The moment we started to realize the potential of this vast field, IT. In which we began to see the problems in the field that people face but also solutions, better or worse, for those problems.',
             month: 'March',
             year: '2017'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Journey',
+            content: 'The beginning of the adventure in the field of Web Development agencies. We knew clearly that we wanted to do this, but we didn\'t really know how to get what we wanted, but motivation and vision drove us to progress, without realizing that we were doing it.',
             month: 'June',
             year: '2017'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Knowledge',
+            content: 'The moment we decided that we want to become Full-Stack programmers, or rather experts in the field of Web Development.',
             month: 'July',
             year: '2017'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Turning Point',
+            content: 'As things change drastically for the better, at this point our road has taken a sharp turn. Then I changed the: whole development process I used, combining it with a more modern one, fast, easy to follow.',
             month: 'February',
             year: '2018'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Dawn',
+            content: 'The moment when the agency even took a form of agency, the moment when I made the first project for a person outside the agency.',
             month: 'November',
             year: '2018'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Stability',
+            content: 'The moment everything stabilized, things continued to progress that until then, we all knew exactly what and how to do.',
             month: 'March',
             year: '2019'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Dedication',
+            content: 'With the freer period of the pandemic, we all had the chance to dedicate as much time as possible to this team, maybe even 4 times as before. Here we can say that we started the real thing.',
             month: 'December',
             year: '2019'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Setup',
+            content: 'At this moment we have formed a very clear vision of transforming the web field into a pleasant and easy to use one. Also during this period, we established our name and milestone.',
             month: 'November',
             year: '2020'
         },
         {
-            title: 'The beginings',
-            content: 'The moment it all started',
+            title: 'The Leap',
+            content: 'During this period we had the chance to work with a lot of strong people,during which time we all learned to appreciatethe support and help we received and willcontinue to receive.',
             month: 'March',
             year: '2021'
         },
         {
-            title: 'The present',
-            content: 'We started developing this webiste:adadadadadadadadadadadadadad:',
+            title: 'The Achievement',
+            content: 'As everything comes to an end, we reach the present, when we are determined and motivated to achieve our goals, so we are already working every day to make that vision the reality in which we all live.',
             month: 'April',
             year: '2021'
         },
@@ -254,17 +254,17 @@ const About = () => {
                 </div>
             </LazyLoad>{console.log(checkpoints[selectedCheckPoint-1].content.split(':'))}
 
-            <div className="container-fluid py-5 d-block d-lg-block" style={{ background: '#15141A' }}>
+            <div className="container-fluid py-1 d-block d-lg-block" style={{ background: '#15141A' }}>
                 <div className={(width < 100 ? '' : 'container') + " py-5 w-100 p-0"}>
-                    <h2 className="rightenous text-light mb-2 mt-5 text-center">Our <span style={{ color: '#E57016' }}>story</span></h2>
-                    <p className="poppins font-weight-lighter w-25 text-light mb-5 text-center mx-auto d-none d-lg-block">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
-                    <p className="poppins font-weight-lighter w-75 text-light mb-5 text-center mx-auto d-block d-lg-none">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
+                    <h2 className="rightenous text-light mb-2 text-center">Our <span style={{ color: '#E57016' }}>story</span></h2>
+                    <p className="poppins font-weight-lighter w-50 text-light mb-5 text-center mx-auto d-none d-xl-block">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
+                    <p className="poppins font-weight-lighter w-75 text-light mb-5 text-center mx-auto d-block d-xl-none">It all started a long time ago and we can say it loud that we enjoyed every single day of it. Below you can find a bit from it, more to come later:</p>
                     
                     <div className="row mb-3 w-100 px-0 mx-0">
-                        <div className={`col-12 col-lg-1 text-center text-lg-left offset-0 offset-lg-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
+                        <div className={`col-12 col-xl-1 text-center text-xl-left offset-0 offset-xl-${selectedCheckPoint - 1} px-0 d-flex flex-column justify-content-center`}>
                             <h4 className="rightenous text-light" style={{ whiteSpace: 'noWrap'}}>{checkpoints[selectedCheckPoint-1].title}</h4>
-                            <h6 className="poppins text-light w-100 d-none d-lg-block" style={{ fontWeight: 200, whiteSpace: 'noWrap' }}>{checkpoints[selectedCheckPoint-1].content.split(':').map(el => { return <>{el}<br /></> })}</h6>
-                            <h6 className="poppins text-light w-100 d-block d-lg-none" style={{ fontWeight: 200 }}>{checkpoints[selectedCheckPoint-1].content}</h6>
+                            <h6 className="poppins text-light d-none d-xl-block" style={{ fontWeight: 200, wordWrap: 'break-word', width: (selectedCheckPoint-1 === 11 ? '220%' : '400%') }}>{checkpoints[selectedCheckPoint-1].content.split(':').map(el => { return <>{el}<br /></> })}</h6>
+                            <h6 className="poppins text-light w-100 d-block d-xl-none" style={{ fontWeight: 200 }}>{checkpoints[selectedCheckPoint-1].content}</h6>
                             <svg width="1" height="38" viewBox="0 0 1 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="align-self-center">
                                 <line x1="0.5" y1="38" x2="0.500002" y2="-2.18557e-08" stroke="white"/>
                             </svg>
