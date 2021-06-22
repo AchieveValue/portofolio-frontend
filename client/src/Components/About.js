@@ -47,7 +47,7 @@ const About = () => {
     const checkpoints = [
         {
             title: 'The beginning',
-            content: 'That\'s when it all started, when we started making appointments, for fun, but at least we started.',
+            content: 'That\'s when it all started, when we started programming, for fun, but at least we started.',
             month: 'November',
             year: '2016'
         },
@@ -77,7 +77,7 @@ const About = () => {
         },
         {
             title: 'The Turning Point',
-            content: 'As things change drastically for the better, at this point our road has taken a sharp turn. Then I changed the: whole development process I used, combining it with a more modern one, fast, easy to follow.',
+            content: 'As things change drastically for the better, at this point our road has taken a sharp turn. Then I changed the whole development process I used, combining it with a more modern one, fast, easy to follow.',
             month: 'February',
             year: '2018'
         },
@@ -107,7 +107,7 @@ const About = () => {
         },
         {
             title: 'The Leap',
-            content: 'During this period we had the chance to work with a lot of strong people,during which time we all learned to appreciatethe support and help we received and willcontinue to receive.',
+            content: 'During this period we had the chance to work with a lot of strong people, during which time we all learned to appreciate the support and help we received and will continue to receive.',
             month: 'March',
             year: '2021'
         },
@@ -209,22 +209,22 @@ const About = () => {
                             <h2 className="poppins font-weight-bold mb-1 text-light">Meet</h2>
                             <h2 className="poppins font-weight-bold mb-1" style={{ color: '#E57016' }}>Our team</h2>
                         </div>
-                        <div className="container w-100 row align-items-center justify-content-center d-none d-md-flex" style={{ height: '18vh' }}>
-                            <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
+                        <div className="container w-100 row align-items-center justify-content-center d-none d-lg-flex" style={{ height: '18vh' }}>
+                            <div className="col-3 col-lg-2 d-flex d-lg-flex justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp3.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1629331200&v=beta&t=jIZcG2y9P6pDg-rKO61yhmRn7-bIqG8mH_MBKub6Wew')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
-                            <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[1])}}>
+                            <div className="col-3 col-lg-2 d-flex d-lg-flex justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[1])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[1].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://media-exp1.licdn.com/dms/image/C4E03AQEe_Jmcm_5q3A/profile-displayphoto-shrink_200_200/0/1620361118913?e=1625702400&v=beta&t=N6JzASfVeVm4vi85hZKe8R1Bc9HhnUFlcdX3yuK_Nao')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 1 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
-                            <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
+                            <div className="col-3 col-lg-2 d-flex d-lg-flex justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[2])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[2].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/rf5MT6X/paola-min-1.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 2 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016')}} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
-                            <div className="col-3 col-lg-2 d-flex d-lg-block justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
+                            <div className="col-3 col-lg-2 d-flex d-lg-flex justify-content-center" onClick={() => {setSelectedTeamate(ourTeamContent[3])}}>
                                 <motion.div className="rounded-circle bg-light" animate={ourTeamContent[3].animate} style={{ width: '15vh', height: '15vh', backgroundImage: `url('https://i.ibb.co/4ZG61Dp/poza-01-min.png')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 3 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
                         </div>
 
-                        <div className="container w-100 row d-flex align-items-center justify-content-center d-md-none" style={{ height: '18vh' }}>
+                        <div className="container w-100 row d-flex align-items-center justify-content-center d-lg-none" style={{ height: '27vh' }}>
                             <div className="col-4" onClick={() => {setSelectedTeamate(ourTeamContent[0])}}>
                                 <motion.div className="rounded-circle" animate={ourTeamContent[0].animate} style={{ width: '25vw', height: '25vw', backgroundImage: `url('https://media-exp3.licdn.com/dms/image/C4E03AQGp-bWQw5eTFQ/profile-displayphoto-shrink_200_200/0/1610734448728?e=1629331200&v=beta&t=jIZcG2y9P6pDg-rKO61yhmRn7-bIqG8mH_MBKub6Wew')`, backgroundSize: 'cover', backgroundPosition: 'center', boxShadow: (selectedTeamate.id === 0 ? '0 0 0px 10px #E57016' : '0 0 0px 0px #E57016') }} initial={{ boxShadow: '0 0 0px 10px #E57016' }} whileHover={{ boxShadow: '0 0 0px 10px #E57016'}}></motion.div>
                             </div>
