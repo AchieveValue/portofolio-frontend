@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../App.css';
 import  { motion, useAnimation } from 'framer-motion';
-import axios from 'axios';
 import NavBar from './Navbar';
+import axios from 'axios'
 
 import parent from './Animations';
 
@@ -44,25 +44,48 @@ const Contact = () => {
     const firstName = useRef('');
     const lastName = useRef('');
     const message = useRef('');
-    const [data, setData] = useState({})
     const [errors, setErrors] = useState([]);
-
-    const checkData = () => {
+    const subjects = [
+        'front-end',
+        'back-end',
+        'full-stack'
+    ]
+    const representative = useRef();
+    const checkData = async () => {
+        setErrors([]);
+        if(email.current.value === '' || firstName.current.value === '' || lastName.current.value === '' || message.current.value === ''){
+            setErrors(last => [...last, 'All fields must be completed']);
+            return;
+        }
+        
         if(email.current.value.length < 3)
-            setErrors(...errors, 'The email must be longer than 3 characters')
-        if(email.current.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g))
-            setErrors(...errors, 'The email is invalid')
+        setErrors(last => [...last, 'The email must be longer than 3 characters'])
+        if(!email.current.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+        setErrors(last => [...last, 'The email is invalid'])
         if(firstName.current.value.length > 200)
-            setErrors(...errors, 'The email must not be longer than 200 characters')
+        setErrors(last => [...last, 'The firstName must not be longer than 200 characters'])
         if(lastName.current.value.length > 200)
-            setErrors(...errors, 'The email must not be longer than 200 characters')
+        setErrors(last => [...last, 'The lastName must not be longer than 200 characters'])
+        if(firstName.current.value.length < 3)
+        setErrors(last => [...last, 'The firstName must not be longer than 2 characters'])
+        if(lastName.current.value.length < 3)
+        setErrors(last => [...last, 'The lastName must not be longer than 2 characters'])
         if(message.current.value.length < 5)
-            setErrors(...errors, 'The email must not be longer than 5 characters')
+        setErrors(last => [...last, 'The message must be longer than 5 characters'])
+        
         if(errors.length > 0){
             return;
         }
-        setData(email.current.value, firstName.current.value, lastName.current.value, message.current.value)
-        axios.post('/', data)
+        
+        let subject = subjects[selected];
+        let data = {
+            name: lastName.current.value + " " + firstName.current.value,
+            email: email.current.value,
+            message: message.current.value,
+            representative: representative.current.value,
+            subject: subject
+        }
+        await axios.post('./iDon\'Sin', data);
     }
     return(
         <div>
@@ -75,12 +98,17 @@ const Contact = () => {
                         <img src='https://images.pexels.com/photos/3184429/pexels-photo-3184429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' alt='people' className='mt-4'/>
                    </div>
                     <div className='d-flex flex-column col-12 col-lg-4 px-3 py-0 mb-5 bg-white rounded'>
-                        <div className="px-0">
+                        {
+                            errors.length < 1 ? null : 
+                            <div className="px-0">
                             <div className="bg-danger d-flex flex-column align-items-start justify-content-center px-5 py-2 rounded-lg mb-4">
                                 <h6 className="text-light poppins mt-2">You have some errors</h6>
-                                <p className="text-light poppins font-weight-light mb-2">-Email is invalid</p>
+                                {errors.map(err => {
+                                    return <p className="text-light poppins font-weight-light mb-2">{err}</p>
+                                })}
                             </div>
-                        </div>
+                            </div>
+                        }
                         <div className='d-flex mt-0 mx-5'>
                             <div className='d-flex flex-column'>
                                 <p className='mb-2 font-weight-bold'>First Name</p>
@@ -97,7 +125,7 @@ const Contact = () => {
                         </div>
                         <div className='d-flex flex-column px-5 mt-3'>
                             <p className='mb-2 font-weight-bold'>Representative</p>
-                            <select className='form-control'>
+                            <select className='form-control' ref={representative}>
                                 <option>Individual</option>
                                 <option>Company</option>
                             </select>
@@ -112,7 +140,7 @@ const Contact = () => {
                             </div>
                         <div className='d-flex flex-column px-5 mt-3'>
                             <p className='mb-2 font-weight-bold'>Message</p>
-                            <textarea className='form-control' maxlength='255' rows='5' style={{resize:'none', overflow:'auto'}} ref={message}/>
+                            <textarea className='form-control' maxLength='255' rows='5' style={{resize:'none', overflow:'auto'}} ref={message}/>
                         </div>
                         <button className='align-self-center w-50 mt-3 btn w-75 poppins font-weight-bold text-light mt-4' style={{ background: '#e57035' }} onClick={() => checkData()}>Submit</button>
                     </div> 

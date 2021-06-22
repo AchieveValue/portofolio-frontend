@@ -16,8 +16,9 @@ const Error404 = () => {
                     <div className="container d-flex align-items-center justify-content-center text-light flex-column flex-lg-row text-center">
                         <motion.h1 className="mr-5 display-4" initial={{ rotateY: 0 }} animate={{ rotateY: [360, 0] }}><i className="fas fa-exclamation-circle"></i></motion.h1>
                         <div className="">
-                            <h2 className="rightenous">Opps, this page was not found!</h2>
-                            <h5 className="poppins font-weight-light mt-4">We are sorry but you may want to go back to <Link to="/" className="text-light font-weight-bold">home page</Link>.</h5>
+                            <h2 className="rightenous">Oops, this page was not found!</h2>
+                            <h5 className="poppins font-weight-light mt-4">We are sorry, you may want to go back to the <Link to="/" className="text-light font-weight-bold">home page</Link>.</h5>
+                            <h5 className="poppins font-weight-light mt-4"> Static will be fired for this, don't worry!</h5>
                         </div>
                     </div>
                 </div>
